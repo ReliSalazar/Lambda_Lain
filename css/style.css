@@ -371,7 +371,7 @@ footer.footer .move-up span:hover {
     .nav .nav-brand a {
         border: 0px solid var(--purple);
         font-size: 1.6rem;
-        padding: 1rem 0;
+        padding: 0.5rem 0;
         display: block;
         font-size: 1.6rem;
         text-align: left;
