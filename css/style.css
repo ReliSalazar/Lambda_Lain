@@ -364,6 +364,10 @@ footer.footer .move-up span:hover {
 /*-------Viewport less then or equal to 750px-------*/
 
 @media only screen and (max-width:750px) {
+    .nav {
+        padding: 1rem 2rem;
+    }
+
     .nav .nav-brand a {
         border: 0px solid var(--purple);
         font-size: 1.6rem;
@@ -380,6 +384,7 @@ footer.footer .move-up span:hover {
 
     .nav .toggle-collapse {
         display: initial;
+        padding: 1rem 0;
     }
 
     main .site-content {
