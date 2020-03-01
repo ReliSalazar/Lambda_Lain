@@ -180,7 +180,7 @@ main .site-title {
 }
 
 main .site-title .site-background {
-    padding-top: 9rem;
+    padding-top: 20vh;
     text-align: center;
     color: var(--light);
 }
