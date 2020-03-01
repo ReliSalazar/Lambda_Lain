@@ -380,6 +380,7 @@ footer.footer .move-up span:hover {
 
     .nav .nav-menu, .nav .nav-items {
         flex-direction: column;
+        margin-top: 10px;
     }
 
     .nav .toggle-collapse {
