@@ -1,0 +1,50 @@
+@import url(../css/fonts.css);
+
+:root {
+    /* Theme colors */
+    --dark: #110212;
+    --purple: #1E0321;
+    --red: #DE3C4B;
+    --light: #FFFFFF;
+
+    /* Theme font-family */
+    --Roboto: 'Roboto';
+    --RobotoMono: 'RobotoMono';
+    --SpaceMono: 'SpaceMono';
+}
+
+h1 {
+    font-family: var(--SpaceMono);
+    font-size: 40px;
+    color: var(--dark);
+}
+
+p {
+    font-family: var(--RobotoMono);
+    font-size: 20px;
+    color: var(--dark);
+}
+
+.dark {
+    color: var(--dark);
+}
+
+.purple {
+    color: var(--purple);
+}
+
+.red {
+    color: var(--red);
+}
+
+.light {
+    color: var(--light);
+}
+
+.b {
+    font-weight: bold;
+}
+
+footer.footer {
+    margin-top: 10rem;
+}

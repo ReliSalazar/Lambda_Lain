@@ -1,0 +1,17 @@
+/* font-family: Space Mono */
+@font-face {
+    font-family: SpaceMono;
+    src: url(../fonts/Space_Mono/SpaceMono-Regular.ttf);
+}
+
+/* font-family: Roboto Mono */
+@font-face {
+    font-family: RobotoMono;
+    src: url(../fonts/Roboto_Mono/RobotoMono-Regular.ttf);
+}
+
+/* font-family: Roboto */
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
