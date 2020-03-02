@@ -13,16 +13,20 @@
     --SpaceMono: 'SpaceMono';
 }
 
-h1 {
+.post-title h1 {
     font-family: var(--SpaceMono);
-    font-size: 35px;
+    font-size: 33px;
     color: var(--dark);
 }
 
-p {
+.post-title p {
     font-family: var(--RobotoMono);
-    font-size: 20px;
+    font-size: 18px;
     color: var(--dark);
+}
+
+.post-title .img {
+    width: 100%;
 }
 
 .dark {
@@ -47,4 +51,24 @@ p {
 
 footer.footer {
     margin-top: 10rem;
+}
+
+@media only screen and (max-width:750px) {
+    .post-title h1 {
+        font-size: 25px;
+    }
+    
+    .post-title p {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width:520px) {
+    .post-title h1 {
+        font-size: 20px;
+    }
+    
+    .post-title p {
+        font-size: 12px;
+    }
 }
