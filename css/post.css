@@ -15,8 +15,16 @@
 
 .post-title h1 {
     font-family: var(--SpaceMono);
-    font-size: 33px;
+    font-size: 30px;
     color: var(--dark);
+}
+
+.post-title h2 {
+    font-size: 22px;
+}
+
+main .post-content .post-title a {
+    font-size: 22px;
 }
 
 .post-title p {
@@ -49,17 +57,46 @@
     font-weight: bold;
 }
 
+.post-title p a.link {
+    font-size: 18px;
+    color: var(--red);
+}
+
+.post-title ul a.link {
+    font-size: 20px;
+    color: var(--red);
+}
+
 footer.footer {
     margin-top: 10rem;
 }
+
+
 
 @media only screen and (max-width:750px) {
     .post-title h1 {
         font-size: 25px;
     }
+
+    .post-title h2 {
+        font-size: 18px;
+    }
+
+    main .post-content .post-title a {
+        font-size: 18px;
+    }
     
     .post-title p {
         font-size: 15px;
+    }
+
+    .post-title p a.link {
+        font-size: 15px;
+    }
+
+    .post-title ul a.link {
+        font-size: 18px;
+        color: var(--red);
     }
 }
 
@@ -67,8 +104,25 @@ footer.footer {
     .post-title h1 {
         font-size: 20px;
     }
+
+    .post-title h2 {
+        font-size: 16px;
+    }
+
+    main .post-content .post-title a {
+        font-size: 16px;
+    }
     
     .post-title p {
         font-size: 12px;
+    }
+
+    .post-title p a.link {
+        font-size: 12px;
+    }
+
+    .post-title ul a.link {
+        font-size: 16px;
+        color: var(--red);
     }
 }

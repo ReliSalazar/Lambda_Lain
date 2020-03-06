@@ -4,17 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="../../assets/favicon.png">
+  <link rel="shortcut icon" href="../../../assets/favicon.png">
   <title>Lambda Lain</title>
 
   <!-------Font Awesome Icons------->
-  <link rel="stylesheet" href="../../css/all.css">
+  <link rel="stylesheet" href="../../../css/all.css">
 
   <!-------AOS Library------->
-  <link rel="stylesheet" href="../../css/aos.css">
+  <link rel="stylesheet" href="../../../css/aos.css">
 
   <!-------Custom Style------->
-  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../../css/style.css">
+  <link rel="stylesheet" href="../../../css/post.css">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
   <nav class="nav">
     <div class="nav-menu flex-row">
       <div class="nav-brand">
-        <a href="../../index.html" class="nav-link">Lambda Lain</a>
+        <a href="../../../index.html" class="nav-link">Lambda Lain</a>
       </div>
       <div class="toggle-collapse">
         <div class="toggle-icons">
@@ -32,13 +33,13 @@
       <div>
         <ul class="nav-items">
           <li class="nav-link">
-            <a href="../../index.html">Inicio</a>
+            <a href="../../../index.html">Inicio</a>
           </li>
           <li class="nav-link">
-            <a href="../../src/python/indice_python.html">Python</a>
+            <a href="../../../src/python/indice_python.html">Python</a>
           </li>
           <li class="nav-link">
-            <a href="../../src/blog/indice_blog.html">Blog</a>
+            <a href="../../../src/blog/indice_blog.html">Blog</a>
           </li>
         </ul>
       </div>
@@ -56,27 +57,41 @@
   <!-------Main Site Section------->
 
   <main>
-    <!-------Site Title------->
-
-    <section class="site-title">
-      <div class="site-background" data-aos="fade-up" data-aos-delay="100">
-        <h3>Lambda Lain</h3>
-        <h1>Blog de tecnología y programación</h1>
-        <a href="../../src/about.html"><button class="btn">Sobre ese sitio</button></a>
-      </div>
-    </section>
-
-    <!---X---Site Tittle---X--->
-
     <!-------Site Content------->
 
     <section class="container">
       <div class="site-content">
         <div class="posts">
-          <h1 class="recientes">Todos los post sobre Python:</h1>
-          
-
-          <!--list of the posts-->
+          <div class="post-content" data-aos="flip-left" data-aos-delay="300">
+            <div class="post-image">
+              <div>
+                <img src="./introduccion/img/introduccion.png" class="img" alt="curso de python">
+              </div>
+              <div class="post-info flex-row">
+                <span><i class="fas fa-user"></i>&nbsp;&nbsp;Reli</span>
+                <span><i class="fas fa-calendar-alt"></i>&nbsp;&nbsp;Marzo 1, 2020</span>
+              </div>
+            </div>
+            <div class="post-title">
+              <h1>Índice</h1>
+              <p>
+                El objetivo de este curso es que cualquiera pueda iniciarse en la programación partiendo
+                desde cero, utilizando el lenguaje de programación Python en su versión 3.
+                <br>
+                La idea es presentar los conceptos poco a poco con una breve explicación, acompañada de
+                ejercicios resueltos e invitando a la resolución de otros ejercicios propuestos,
+                dejando de lado los tecnicismos y toda la información innecesaria en un principio
+                que pueda entorpecer o dificultar la comprensión para un momento futuro.
+                <br><br><br>
+                <hr>
+                <br><br><br>
+                <a href="./introduccion/introduccion.html" class="link">1 - Introducción y objetivos del curso</a>
+                <br><br>
+                <a href="./instalacion/instalacion.html" class="link">2 - Instalar la última versión de Python</a>
+                <br><br>
+              </p>
+            </div>
+          </div>
 
 
         </div>
@@ -85,10 +100,10 @@
             <h2>Categorías</h2>
             <ul class="category-list">
               <li class="list-items" data-aos="fade-left" data-aos-delay="100">
-                <a href="../../src/python/indice_python.html">Python</a>
+                <a href="../../../src/python/indice_python.html">Python</a>
               </li>
               <li class="list-items" data-aos="fade-left" data-aos-delay="400">
-                <a href="../../src/blog/indice_blog.html">Blog</a>
+                <a href="../../../src/blog/indice_blog.html">Blog</a>
               </li>
             </ul>
           </div>
@@ -108,7 +123,8 @@
     <div class="container">
       <div class="about-us">
         <h2>Sobre este sitio</h2>
-        <p class="about">Lambda Lain es un sitio que nace con la idea de devolver al internet una parte de todo el conocimiento que me ha regalado.</p>
+        <p class="about">Lambda Lain es un sitio que nace con la idea de devolver al internet una parte de todo el
+          conocimiento que me ha regalado.</p>
       </div>
       <div class="follow">
         <h2>Redes</h2>
@@ -122,7 +138,7 @@
         <h2>¿Quieres apoyar el contenido?</h2>
         <a target="_blank" href="https://ko-fi.com/N4N11H07D">
           <p class="about">Invitame un café haciendo click aquí</p>
-          <img src="../../src/kofi_logo.png" class="img" width="80">
+          <img src="../../../src/kofi_logo.png" class="img" width="80">
         </a>
       </div>
     </div>
@@ -135,14 +151,14 @@
 
 
   <!-------JQuery Library file------->
-  <script src="../../js/jquery3.4.1.min.js"></script>
+  <script src="../../../js/jquery3.4.1.min.js"></script>
 
 
   <!-------Custom Javascript file------->
-  <script src="../../js/main.js"></script>
+  <script src="../../../js/main.js"></script>
 
   <!-------AOS JS Library------->
-  <script src="../../js/aos.js"></script>
+  <script src="../../../js/aos.js"></script>
 </body>
 
 </html>
