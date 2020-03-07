@@ -57,6 +57,14 @@ main .post-content .post-title a {
     font-weight: bold;
 }
 
+.i {
+    font-style: italic;
+}
+
+.code {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 .post-title p a.link {
     font-size: 18px;
     color: var(--red);

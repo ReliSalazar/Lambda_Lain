@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../../../assets/favicon.png">
+  <title>Lambda Lain</title>
+
+  <!-------Font Awesome Icons------->
+  <link rel="stylesheet" href="../../../css/all.css">
+
+  <!-------AOS Library------->
+  <link rel="stylesheet" href="../../../css/aos.css">
+
+  <!-------Custom Style------->
+  <link rel="stylesheet" href="../../../css/style.css">
+  <link rel="stylesheet" href="../../../css/post.css">
+</head>
+
+<body>
+  <!-------Navigation------->
+  <nav class="nav">
+    <div class="nav-menu flex-row">
+      <div class="nav-brand">
+        <a href="../../../index.html" class="nav-link">Lambda Lain</a>
+      </div>
+      <div class="toggle-collapse">
+        <div class="toggle-icons">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+      <div>
+        <ul class="nav-items">
+          <li class="nav-link">
+            <a href="../../../index.html">Inicio</a>
+          </li>
+          <li class="nav-link">
+            <a href="../../../src/python/indice_python.html">Python</a>
+          </li>
+          <li class="nav-link">
+            <a href="../../../src/blog/indice_blog.html">Blog</a>
+          </li>
+        </ul>
+      </div>
+      <div class="social text-purple">
+        <a target="_blank" href="https://github.com/ReliSalazar"><i class="fab fa-github"></i></a>
+        <a target="_blank" href="https://gitlab.com/Reli"><i class="fab fa-gitlab"></i></a>
+        <a target="_blank" href="https://twitter.com/Reli_Salazar"><i class="fab fa-twitter"></i></a>
+        <a target="_blank" href="https://www.facebook.com/rlslzr/"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </nav>
+  <!---X---Navigation---X--->
+
+
+  <!-------Main Site Section------->
+
+  <main>
+    <!-------Site Content------->
+
+    <section class="container">
+      <div class="site-content">
+        <div class="posts">
+          <div class="post-content" data-aos="flip-left" data-aos-delay="300">
+            <div class="post-image">
+              <div>
+                <img src="../curso_python.png" class="img" alt="curso de python">
+              </div>
+              <div class="post-info flex-row">
+                <span><i class="fas fa-user"></i>&nbsp;&nbsp;Reli</span>
+                <span><i class="fas fa-calendar-alt"></i>&nbsp;&nbsp;Marzo 7, 2020</span>
+              </div>
+            </div>
+            <div class="post-title">
+              <h1>3 - Primer Programa en Python</h1>
+              <p>
+                Vamos a crear nuestro primer programa, pero antes de todo, hay un par de ideas que necesitamos
+                comprender.
+              </p>
+              <p>
+                Pero antes que nada, un pequeño aviso de que este post será largo, el resto raramente serán así de largos,
+                pero espero que puedan entender que al ser el primer post como tal trabajando con el lenguaje, hay muchas cosas
+                que poner como contexto, pero principalmente, veremos como utilizar las herramientas que he recomendado. <br><br>
+                Una vez veamos todas estas cosas, el resto será trabajar directamente con caracteristicas más concretas una por una.
+              </p>
+              <p>
+                Como mencionamos antes, Python es un lenguaje de programación interpretado, esto implica
+                que la mayoría de sus implementaciones ejecutan las instrucciones directamente sin una compilación
+                previa. Esto tiene algunas ventajas como el poder ejecutar lineas de código en tiempo real,
+                haciendo uso de un interprete, como el que trae Python con su propia instalación, así que
+                antes de crear nuestro primer programa, demosle un vistazo al <span class="b">Python Shell</span>
+                en el <span class="b">IDLE</span> de Python.
+                <br><br>
+              </p>
+              <h2>Crear un Script de Python</h2>
+              <p>
+                Hay dos ventanas principales con las que trabajaras al utilizar el IDLE: la
+                <span class="b">ventana interactiva</span> que es aquella que se abre cuando inicias el IDLE,
+                y la <span class="b">ventana de script</span>.
+              </p>
+              <p>
+                Puedes escribir código en ambas ventanas, la principal diferencia entre estas, es la forma
+                en la que el código se ejecuta. Ahora veremos como escribir código en ambas ventanas y como se ejecuta.
+              </p>
+              <br>
+              <h3>La ventana interactiva</h3>
+              <p>
+                Esta contiene el <span class="b">Python Shell</span>, una interfaz de usuario textual usada para
+                interactuar con el lenguaje Python.
+              </p>
+              <p>
+                Cuando abres el IDLE por primera vez, el texto debería verse más o menos así:
+              </p>
+              <div class="code"><code>
+                Python 3.8.0 (default, Oct 28 2019, 16:14:01) <br>
+                [GCC 8.3.0] on linux <br>
+                Type "help", "copyright", "credits" or "license()" for more information. <br>
+                >>>
+              </code></div>
+              <p>
+                La primera linea te dice que versión de Python está siendo utilizada, en este caso,
+                el IDLe funciona en Python 3.8.0. La segunda y tercera linea dan un poco de información
+                sobre el sistema operativo y algunos comandos para obtener información extra sobre Python.
+              </p>
+              <p>
+                El simbolo >>> en la última linea es llamado el <span class="b">prompt</span>. Ahí es
+                donde ingresas tu código, por ejemplo, ingresa <span-i>3 + 4</span-i> y presiona <span
+                  class="i">Enter</span>.
+              </p>
+              <p>
+                Cuando presionas <span class="i">Enter</span> evalúa la expresión, reduciendola tanto como es posible,
+                muestra el resultado cuando no es posible reducirla más, en este caso <span class="i">7</span>
+                y entonces aparece el <span class="b">prompt</span> esperando un nuevo input por tu parte.
+              </p>
+              <div class="code"><code>
+                >>> 3 + 4 <br>
+                7 <br>
+                >>>
+              </code></div>
+              <p>
+                El prompt de Python >>> aparece de nuevo después de cada resultado. <br>
+                El funcionamiento de la ventana interactiva puede describirse como un bucle con tres pasos: <br><br>
+                1. Python lee el código ingresado en el prompt. <br>
+                2. Entonces el código es evaluado. <br>
+                3. Y finalmente, el resultado es impreso en la ventana y un nuevo prompt se muestra.
+              </p>
+              <p>
+                Con frecuencia a este bucle se le conoce como <span class="b">R</span>ead-<span
+                  class="b">E</span>valuate-<span class="b">P</span>rint
+                <span class="b">L</span>oop, o <span class="b">REPL</span>. Bucle Leer, Evaluar, Imprimir.
+              </p>
+              <p>
+                Vamos a intentar algo más interesante que sumar dos números. <br>
+                El rito de iniciación de todos los programadores es escribir su primer programa
+                <span class="i">"Hola mundo"</span>, el cual imprime la frase "Hola mundo" en pantalla. <br>
+                Para escribir texto en la pantalla con Python, se utiliza la función <span class="i">print()</span>.
+                <br><br>
+                Una función es un pedazo de código que usualmente toma un argumento, lo procesa y realiza
+                alguna acción particular o devuelve algún valor (<span class="i b">return value</span>). <br><br>
+                Estas funciones son muy parecidas a las funciones matemáticas que seguramente ya conoces,
+                pero hablaremos mucho más a fondo sobre eso más adelante, de momento, quedate con la idea de que
+                una función es un pedazo de código al cual le pasas un valor, y hace algo con el, en el caso de la
+                función
+                <span class="i">print()</span>, imprimirlo en pantalla.
+              </p>
+              <p>
+                para usar la función <span class="i">print()</span>, escribe la palabra <span class="i">print</span>
+                en el prompt de la ventana interactiva, seguido del texto <span class="i">"Hola mundo"</span> entre
+                parentesis.
+              </p>
+              <div class="code"><code>
+                >>> print("Hola mundo") <br>
+                Hola mundo <br>
+                >>> <br>
+              </code></div>
+              <p>
+                <span class="i">"Hola mundo"</span> es un argumento pasado a la función <span class="i">print()</span>. <br>
+                "Hola mundo" debe ser escrito entre comillas para que el interprete de Python sepa que es un texto y no algo más.
+              </p>
+              <p>
+                Si estás utilizando el IDLE, a este punto ya habrás notado que el color del texto cambia en algunas partes
+                de tu código, esto es conocido como <span class="b i">highlight</span> y lo hace el IDLE automaticamente,
+                tiene la función de ayudar a identificar las diferentes partes del código.
+              </p>
+              <p>
+                Esto también suele estar implementado por defecto en casi cualquier editor de código moderno,
+                más adelante veremos algunos ejemplos con los editores que recomendé en el post anterior.
+              </p>
+              <p>
+                La ventana interactiva solo puede ejecutar una linea a la vez, lo cual puede ser útil para experimentar
+                con el lenguaje o realizar pruebas con pedazos de código muy pequeños, pero tiene muchas limitaciones,
+                no es eficiente escribir cada una de las lineas de código cada vez que tengas que realizar una tarea
+                y editar el código en caso de que te equivoques puede ser realmente complicado.
+              </p>
+              <p>
+                Afortunadamente, puedes escribir código de Python en un archivo de texto, entonces ejecutarlo utilizando un comando,
+                estos son llamados <span class="b i">script files</span>.
+              </p>
+              <p>
+                Los scripts no solo tienen la ventaja de hacer mucho más fácil ejecutar código, sino también ayudan a poder
+                compartir tu trabajo con los demás de manera muy simple.
+              </p>
+              <h3>La ventana de scripts</h3>
+              <p>
+                Para abrir la ventana de script en el IDLE, selecciona <span class="i">File > New File</span> en el
+                menú en la esquina superior izquierda o utiliza el comando <span class="i">Ctrl+N</span>.
+              </p>
+              <p>
+                Cuando abres la ventana de scripts, la ventana interactiva se mantiene abierta. Cualquier output
+                generado por la ventana de script se mostrará en la ventana interactiva, por lo que, si vas a trabajar
+                utilizando el IDLE, es una buena idea tener ambas ventanas a la vista de tal forma que puedas ver ambas a la vez.
+              </p>
+              <p>
+                En la ventana de script, escribe el código que utilizaste para imprimir "Hola mundo" en la ventana interactiva.
+              </p>
+              <div class="code"><code>
+                print("Hola mundo")
+              </code></div>
+              <p>
+                Del mismo modo que en la ventana interactiva, el highlight también funciona en la ventana de script.
+              </p>
+              <p>
+                Antes de arrancar tu script, necesitas guardarlo. Para esto, selecciona <span class="i">File > Save</span>
+                y guarda el script como <span class="i">hola_mundo.py</span>.
+              </p>
+              <p>
+                la parte <span class="i">.py</span> es la extensión del archivo, esta indica que se trata de un script de Python. <br>
+                Si guardas tu archivo con una extensión diferente, como <span class="i">.txt</span> por ejemplo, el highlight
+                desaparecerá y todo será mostrado como texto plano. El highlight del IDLE solo funciona con código
+                guardado en un archivo <span class="i">.py</span>.
+              </p>
+              <p>
+                Una vez has guardado tu script, solo te queda por arrancarlo, para ello ve al menú superior y selecciona
+                <span class="b i">Run > Run Module</span> y verás "Hola mundo" aparecer en la ventana interactiva.
+              </p>
+              <div class="code"><code>Hola mundo</code></div>
+              <p>
+                También puedes presionar <span class="i">F5</span> para arrancar tu script desde la ventana de scripts.
+              </p>
+              <p>
+                Cada vez que arrancas un script, verás el siguiente output en la ventana interactiva
+              </p>
+              <div class="code"><code>
+                >>> ========== RESTART ==========
+              </code></div>
+              <p>
+                Esto es para separar cada ejecución entre sí, ya que sí ejecutaras varias veces el mismo script,
+                podría llegar a ser confuso al mezclarse los outputs de cada ejecución.
+              </p>
+              <p>
+                Para abrir un archivo, ve al menú superior y selecciona <span class="b i">File > Open</span>. <br>
+                El IDLE abrirá cada script en una nueva ventana de script.
+              </p>
+              <p>
+                Hacer doble click en un archivo <span class="i">.py</span> en el explorador de archivos
+                no hará que puedas editarlo, para abrilo con el IDLE tendrás que hacer click derecho y elegir la
+                opción de editar con IDLE.
+              </p>
+              <h2>Otros editores de código</h2>
+              <p>
+                Ahora veremos como utilizar los otros editores que mencioné en el post anterior
+                (<span class="i">Visual Studio Code, Atom.io y Sublime text 3</span>) para crear un archivo de python
+                y al finalm como utilizar la consola del sistema para ejecutar el código desde ahí sin el IDLE.
+              </p>
+              <h3>Visual Studio Code</h3>
+              <p>
+                Primero hay que instalar el editor, en el post anterior dejé un link de descarga, pero en caso de que
+                no lo hayas descargado todavía, haz <a target="_blank" href="https://code.visualstudio.com/" class="link">click aquí</a>
+                para ir a la página de descarga. <br><br>
+              </p>
+              <img src="./img/vsc_interfaz.png" alt="Interfaz de Visual Studio Code" class="img">
+              <p>
+                Aquí puedes ver la interfaz de <span class="b">Visual Studio Code</span>, para crear un nuevo archivo ve al menú
+                <span class="b i">File > New File</span> y para abrir uno ve a <span class="b i">File > Open File</span>
+              </p>
+              <p>
+                El lado bueno de este editor de código es que tiene muchas herramientas, en la barra izquierda, está el submenú
+                de extensiones, en donde puedes encontrar una enorme cantidad de temas para iconos, así como para el highlight,
+                así como un montón de herramientas. <br><br>
+                Recomendaría utilizar la extensión de Python. Aparte de eso, puedes dar una vuelta y encontrar un tema que te parezca
+                agradable para la vista. Yo actualmente utilizo el color theme <span class="i">Ayu Dark</span> y el file icon theme <span class="i">Ayu</span>
+                Auqnue hay muchos muy buenos como <span class="i">Monokai, Slack, Dracula</span> entre un montón más.
+              </p>
+              <h3>Atom.io</h3>
+              <p>
+                También dejé un link de descarga a este editor en el post anterior, pero en caso de que no lo hayas
+                descargado todavía, haz <a target="_blank" href="https://atom.io/" class="link">click aquí</a> para ir
+                a la página de descarga. <br><br>
+              </p>
+              <img src="./img/atom_inferfaz.png" alt="Interfaz de Atom.io" class="img">
+              <p>
+                Este editor de código es similar al anterior, tanto así, como que Visual Studio Code es un fork de Atom,
+                es decir, está basado en este editor. <br>
+                Este tiene una gran ventaja y es su funcionamiento altamente integrado con <span class="b">github</span>,
+                pero eso es algo de lo que no hablaremos hasta muuucho más adelante en este curso, básicamente una vez hayamos terminado,
+                así que de momento es algo que no nos agrega nada a nosotros. Pero aun así, es un editor de código muy
+                agradable de utilizar, también tiene muchas extensiones, temas y demás herramientas que nos pueden facilitar mucho el trabajo.
+              </p>
+              <p>
+                El proceso para crear y abrir archivos es exactmaente el mismo que hasta ahora,
+                <span class="b i">File > New File</span> para crear un nuevo archivo y <span class="b i">File > Open File</span> para abrir uno.
+              </p>
+              <h3>Sublime Text 3</h3>
+              <p>
+                Haz <a target="_blank" href="https://www.sublimetext.com/3" class="link">click aquí</a> para ir a la
+                página de descarga de Sublime Text 3.
+              </p>
+              <img src="./img/sublime_interfaz.png" alt="Interfaz de Sublime Text 3" class="img">
+              <p>
+                Este es un poco diferente a los dos anteriores. Como puedes notar en la interfaz, es mucho más simple que los dos anteriores,
+                pero no te dejes engañar, este es probablemente uno de los editores de texto más poderosos que hay gracias a todas sus extensiones
+                que puedes encontrar por internet para añadirle funcionalidad casi ilimitada.
+              </p>
+              <p>
+                Todo esto de las extensiones, tanto en este editor como en los otros es un tema que se sale completamente del topico del curso,
+                pero si te interesa aprender a usar este editor y sacarle todo el provecho, puedes encontrar una infinidad de videos en youtube
+                en español e inglés que te enseñan a modificar practicamente todos los aspectos de este poderoso editor de código.
+              </p>
+              <p>
+                Eso sí, te aviso, este editor es de pago. Puedes utilizarlo de manera gratuita, pero de vez en cuando te saltará
+                una ventana diciendo que compres el software. <br><br>
+              </p>
+              <h3>Ejecutar un script de Python desde la consola</h3>
+              <p>
+                Si piensas utilizar uno de estos editores no podrás ejecutar tus script de forma tan simple como con el IDLE
+                de Python, en estos casos tendrás que hacer uso de la consola integrada en el editor como en el caso de Visual Studio Code
+                o incluso instalar varias extensiones solo para esto, pero para evitar todas estas molestias, es mucho más fácil y simple
+                hacer uso de la consola de comandos de tu sistema operativo.
+              </p>
+              <p>
+                Si estás utilizando Windows, ve al menú de inicio y escribe <span class="i">cmd</span> y da <span class="i">Enter</span>. <br><br>
+                En el caso de MacOS, en el menú de aplicaciones, ve al menú utilities, entonces da doble click en <span class="i">Terminal</span>
+                o presiona <span class="i">Command - spacebar</span> para abrir un spotlight y escribe <span class="i">"Terminal,"</span>
+                entonces haz doble click al resultado de la busqueda. <br><br>
+                En linux es diferente dependiendo de la distribución y a veces incluso depende del WM que estés utilizando,
+                pero en la mayoría aceptan el comando <span class="i">Ctrl+T</span> para ejecutar una terminal, en caso de que esto no funcione,
+                muchas veces se encuentra la aplicación de terminal en algún equivalente al super menu. <br>
+                En caso de que ninguna de estas opcioens funcione, entonces tendrás que buscar por internet como abrir la consola en tu distro.
+              </p>
+              <p>
+                El lado bueno es que, sin importar en que sistema de estos tres principales estés, los comandos más básicos para moverte por
+                tu computadora suelen ser los mismos o muy similares. <br>
+                si utilizas el comando <span class="b i">ls</span> en Linux y MacOS te mostrará tanto la ubicación actual como todo el contenido
+                en la carpeta en que te encuentras ahora mismo. En Windows, esto se hace con el comando <span class="b i">dir</span>
+                para ir a alguna carpeta que sea accesible desde la actual, hay que utilizar el comando <span class="b i">cd [folder name]</span>
+                por ejemplo, para ir a la carpeta de descargas se utilizaría el comando <span class="i">cd descargas</span>
+              </p>
+              <p>
+                Para regresar a una carpeta anterior, se utiliza el comando <span class="b i">cd ..</span>
+              </p>
+              <p>
+                con esto, puedes seguir la ruta hasta la carpeta donde hayas guardado tu archivo <span class="i">hola_mundo.py</span>
+              </p>
+              <div class="code"><code>
+                $ cd Documentos/Python/ <br>
+                $ ls <br>
+                carpeta1 carpeta2 ejemplo.txt hola_mundo.py
+              </code></div>
+              <p>
+                una vez aquí, para ejecutar tu script tendrás que utilizar el comando <span class="b i">python [script file]</span>
+              </p>
+              <div class="code"><code>
+                $ python hola_mundo.py <br>
+                Hola mundo <br>
+                $
+              </code></div>
+              <p>
+                En el caso de linux y MacOS este código se ejecutará sin problemas, pero en Windows (si no me falla la memoria),
+                la ventana se cerrará automaticamente una vez se ejecute. En este caso, recomendaría editar el script
+                <span class="i">hola_mundo.py</span> y agregar al final la linea <span class="i">input()</span>.
+              </p>
+              <p>
+                Hablaremos de la función <span class="i">input()</span> más adelante, de momento, nos ayudará a que nuestro script
+                no se cierre automaticamente en Windows en caso de hacerlo hasta que no pulsemos la tecla <span class="i">Enter</span>.
+              </p>
+              <p>
+                De momento esto es todo, como dije al inicio, este post tenía que ser muy largo sí o sí, había muchas cosas que explicar,
+                entre ellas principalmente como utilizar el IDLE de python o los editores de código que recomendé para trabajar a lo largo del curso,
+                además de un poco de información sobre como navegar utilizando la consola.
+              </p>
+              <p>
+                Hay muchas otras cosas que se pueden hacer con la consola, hay una infinidad de comandos, y sinceramente recomiendo un montón
+                aprender a manejarla correctamente, ya que puede salvarnos en más de una ocación, y saber manejarnos con ella, hará que en el momento
+                que trabajemos escribiendo, leyendo y modificando archivos sea mucho más simple de comprender.
+              </p>
+              <p>
+                Por ahora lo vamos a dejar por aquí, prometo que el próximo post no será tan largo, empezaremos a ver algunos ejemplos
+                más interesantes e incluso un par de ejercicios. <br>
+                Concretamente veremos dos cosas: Errores y variables.
+              </p>
+              <br><span class="b lain">Let's all <span class="red">love</span> Lain <span class="red">&lt3</span>.</span>
+              <br><br><br>
+              <a href="../indice_python.html">
+                <button class="btn post-btn"><i class="fas fa-arrow-left"></i>&nbsp; Volver</button>
+              </a>
+            </div>
+          </div>
+
+
+        </div>
+        <aside class="sidebar">
+          <div class="category">
+            <h2>Categorías</h2>
+            <ul class="category-list">
+              <li class="list-items" data-aos="fade-left" data-aos-delay="100">
+                <a href="../indice_python.html">Python</a>
+              </li>
+              <li class="list-items" data-aos="fade-left" data-aos-delay="400">
+                <a href="../../../src/blog/indice_blog.html">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!---X---Site Content---X--->
+  </main>
+
+  <!---X---Main Site Section---X--->
+
+
+  <!-------Footer------->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="about-us">
+        <h2>Sobre este sitio</h2>
+        <p class="about">Lambda Lain es un sitio que nace con la idea de devolver al internet una parte de todo el
+          conocimiento que me ha regalado.</p>
+      </div>
+      <div class="follow">
+        <h2>Redes</h2>
+        <p class="about">Contacta conmigo</p>
+        <div>
+          <a target="_blank" href="https://twitter.com/Reli_Salazar"><i class="fab fa-twitter"></i></a>
+          <a target="_blank" href="https://www.facebook.com/rlslzr/"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <div class="donations">
+        <h2>¿Quieres apoyar el contenido?</h2>
+        <a target="_blank" href="https://ko-fi.com/N4N11H07D">
+          <p class="about">Invitame un café haciendo click aquí</p>
+          <img src="../../../src/kofi_logo.png" class="img" width="80">
+        </a>
+      </div>
+    </div>
+    <div class="move-up">
+      <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+    </div>
+  </footer>
+
+  <!---X---Footer---X--->
+
+
+  <!-------JQuery Library file------->
+  <script src="../../../js/jquery3.4.1.min.js"></script>
+
+
+  <!-------Custom Javascript file------->
+  <script src="../../../js/main.js"></script>
+
+  <!-------AOS JS Library------->
+  <script src="../../../js/aos.js"></script>
+</body>
+
+</html>
