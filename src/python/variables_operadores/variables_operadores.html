@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Lambda Lain" />
+  <meta property="og:description" content="Blog de tecnología y programación" />
+  <meta property="og:image" content="https://relisalazar.github.io/Lambda_Lain/src/blog/presentacion/img/img1.png" />
+  <link rel="shortcut icon" href="../../../assets/favicon.png">
+  <title>Lambda Lain</title>
+
+  <!-------Font Awesome Icons------->
+  <link rel="stylesheet" href="../../../css/all.css">
+
+  <!-------AOS Library------->
+  <link rel="stylesheet" href="../../../css/aos.css">
+
+  <!-------Custom Style------->
+  <link rel="stylesheet" href="../../../css/style.css">
+  <link rel="stylesheet" href="../../../css/post.css">
+</head>
+
+<body>
+  <!-------Navigation------->
+  <nav class="nav">
+    <div class="nav-menu flex-row">
+      <div class="nav-brand">
+        <a href="../../../index.html" class="nav-link">Lambda Lain</a>
+      </div>
+      <div class="toggle-collapse">
+        <div class="toggle-icons">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+      <div>
+        <ul class="nav-items">
+          <li class="nav-link">
+            <a href="../../../index.html">Inicio</a>
+          </li>
+          <li class="nav-link">
+            <a href="../../../src/python/indice_python.html">Python</a>
+          </li>
+          <li class="nav-link">
+            <a href="../../../src/blog/indice_blog.html">Blog</a>
+          </li>
+        </ul>
+      </div>
+      <div class="social text-purple">
+        <a target="_blank" href="https://github.com/ReliSalazar"><i class="fab fa-github"></i></a>
+        <a target="_blank" href="https://gitlab.com/Reli"><i class="fab fa-gitlab"></i></a>
+        <a target="_blank" href="https://twitter.com/Reli_Salazar"><i class="fab fa-twitter"></i></a>
+        <a target="_blank" href="https://www.facebook.com/rlslzr/"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </nav>
+  <!---X---Navigation---X--->
+
+
+  <!-------Main Site Section------->
+
+  <main>
+    <!-------Site Content------->
+
+    <section class="container">
+      <div class="site-content">
+        <div class="posts">
+          <div class="post-content" data-aos="flip-left" data-aos-delay="300">
+            <div class="post-image">
+              <div>
+                <img src="../curso_python.png" class="img" alt="curso de python">
+              </div>
+              <div class="post-info flex-row">
+                <span><i class="fas fa-user"></i>&nbsp;&nbsp;Reli</span>
+                <span><i class="fas fa-calendar-alt"></i>&nbsp;&nbsp;Marzo 11, 2020</span>
+              </div>
+            </div>
+            <div class="post-title">
+              <h1>4 - Variables y operadores</h1>
+              <p>
+                Vamos a crear nuestras primeras variables, ver algunos consejos para sus nombres
+                y los operadores de Python.
+              </p>
+              <br><br>
+              <h2>Operadores</h2>
+              <br>
+              <h3>Matemáticas básicas</h3>
+              <p>
+                Retomando un poco de la entrada anterior, hemos visto como utilizar la función <span
+                  class="i">print()</span>
+                para mostrar texto en pantalla, también al utilizar el IDLE y su ventana interactiva vimos que podemos
+                hacer
+                sumas.
+              </p>
+              <p>
+                Creo que es importante que, antes de dar el siguiente paso a las variables como tal, dar un vistazo
+                rápido
+                a como realizar operaciones simples en Python.
+              </p>
+              <p>
+                Ya hemos visto como realizar una suma, simplemente ponemos el signo de + entre dos números, podemos
+                utilizar el REPL interactiva para hacer estas pruebas.
+              </p>
+              <br>
+              <h3>Suma</h3>
+              <div class="code"><code>
+                >>> 3 + 4 <br>
+                7 <br>
+                >>> -8 + 3
+              </code></div>
+              <br>
+              <h3>Resta</h3>
+              <p>
+                Para realizar una resta, utilizamos el signo de -
+              </p>
+              <div class="code"><code>
+                >>> 5 - 2 <br>
+                3
+                >>> -8 - 4 <br>
+                -12
+              </code></div>
+              <p>
+                Como vemos, podemos hacer uso de números negativos, esto es igual con cualquier otro tipo de operación
+                matemática.
+                También puedes observar que he escrito el signo negativo unido al 8 en lugar de algo como
+              </p>
+              <div class="code"><code>- 8 - 4</code></div>
+              <p>O algo como esto</p>
+              <div class="code">-8-4</div>
+              <p>
+                En Python, ambas operaciones están bien y son exactamente iguales, pero es una convención hacerlo como
+                en el primer
+                caso por cuestiones de legibilidad, es decir, para hacerlo más fácil de leer por personas, hablaremos de
+                esto más adelante.
+              </p>
+              <br>
+              <h3>Multiplicación</h3>
+              <p>
+                Para realizar una multiplicación, utilizamos el signo *
+              </p>
+              <div class="code"><code>
+                >>> 4 * 6 <br>
+                24 <br>
+                >>> 3 * -5 <br>
+                -15 <br>
+                >>> 2 * 0 <br>
+                0
+              </code></div>
+              <br>
+              <h3>División</h3>
+              <p>
+                Para realizar una división utilizamos el signo /
+              </p>
+              <div class="code"><code>
+                >>> 27 / 3 <br>
+                9.0
+                >>> 30 / -5 <br>
+                -6.0
+              </code></div>
+              <p>
+                Aquí hay varias cosas que añadir. <br>
+                Primero, el resultado de la priemra división, como podemos ver es 9.0 en lugar de simplemente 9,
+                ¿a qué se debe? bueno, esto tiene que ver con el tipo de los valores, hablaremos de eso en un momento,
+                solo hay que aclarar que no es un error ni nada parecido.
+              </p>
+              <p>
+                También hay que destacar una cosa, y es que si intentamos realizar una división entre cero, tendremos
+                un ZeroDivisionError.
+              </p>
+              <pre>
+                <div class="code"><code>
+>>> 3 / 0
+Traceback (most recent call last):
+  File "&lt;pyshell#0>", line 1, in &lt;module>
+    3 / 0
+ZeroDivisionError: division by zero
+                </code></div>
+              </pre>
+              <p>
+                De nuevo, ya hablaremos de esto un poco más adelante en este mismo post.
+              </p>
+              <br>
+              <h3>Exponencial</h3>
+              <p>
+                Para calcular el valor de un número X elevando a Y potencia, podemos utilizar el operador **
+              </p>
+              <div class="code"><code>
+                >>> 3 ** 3 <br>
+                27
+              </code></div>
+              <br>
+              <h3>Integer division</h3>
+              <p>
+                Así como tenemos la división normal, podemos realizar una división muy similar en python,
+                la cual nos da como resultado un número entero, redondeando el resultado para así ignorar el residuo de
+                la operación.
+              </p>
+              <div class="code"><code>
+                >>> 22 / 8 <br>
+                2.75
+                >>> 22 // 8 <br>
+                2
+              </code></div>
+              <br>
+              <h3>Módulo</h3>
+              <p>
+                El operador de módulo %, es un poco más complicado de explicar, en resumen, nos da el restante de una
+                división.
+              </p>
+              <div class="code"><code>
+                >>> 22 % 8 <br>
+                6
+                >>> 5 % 2 <br>
+                1
+              </code></div>
+              <p>
+                En este caso, el resultado es 6, ya que 22 se puede dividir entre 8 dos veces, y nos restan 6, del mismo
+                modo
+                5 puede dividirse entre 2, 2 veces y el sobrante es 1.
+              </p>
+              <p>
+                Se que este operador puede ser un poco extraño de primeras, pero es muy útil ya lo iremos viendo con
+                algunos
+                ejemplos prácticos más adelante.
+              </p>
+              <h3>Jerarquía de operadores</h3>
+              <p>
+                Python sigue la jerarquía de las matemáticas para realizar sus operaciones, y como en las matemáticas,
+                aquí también pueden utilizarse parentesis para cambiar la prioridad de algunas operaciones. <br>
+                Aquí dejo una lista con la prioridad de los operadores:
+              </p>
+              <p>
+                <ul>
+                  <li><span class="b red">**</span> Exponencial</li>
+                  <li><span class="b red">%</span> Módulo/restante</li>
+                  <li><span class="b red">//</span> División entera</li>
+                  <li><span class="b red">/</span> División</li>
+                  <li><span class="b red">*</span> multiplicación</li>
+                  <li><span class="b red">-</span> Resta</li>
+                  <li><span class="b red">+</span> Suma</li>
+                </ul>
+              </p>
+              <br><br>
+              <h2>Variables y nombres</h2>
+              <br>
+              <h3>El nombre de una variable</h3>
+              <br>
+              <p>
+                En Python, una <span class="b">variable</span> es un nombre que se le asigna a un valor
+                y es utilizado para referirse a ese valor particular a lo largo del código. Las variables
+                son fundamentales para la programación por dos razones:
+              </p>
+              <p>
+                <span class="b red">Mantienen los valores accesibles:</span> por ejemplo, el resultado de una operación
+                puede ser almacenado en una variable, de modo que la operación no tenga que ser realizada cada vez
+                que se requiera ese valor.
+              </p>
+              <p>
+                <span class="b red">Dan contexto a los valores:</span> por ejemplo, el número 42 puede significar muchas
+                cosas, la edad de una persona, la cantidad de alumnos de una clase, el area de una figura,
+                la cantidad en inventario de un producto, las veces que se a accedido a una página web, la cantidad
+                de archivos en una carpeta, etc. Darle a esta variable un nombre como <span
+                  class="i">num_estudiantes</span>
+                hace que el significado de ese valor sea claro.
+              </p>
+              <br>
+              <h3>Operador de asignación</h3>
+              <p>
+                Los valores son asignados a las variables utilizando un sumbolo especial llamado
+                <span class="i">operador de asignación (=)</span>
+              </p>
+              <p>
+                para ver el funcionamiento del operador de asignación, vamos a recrear el ejemplo del post anterior.
+              </p>
+              <div class="code"><code>
+                >>> frase = "Hola mundo" <br>
+                >>> print(frase) <br>
+                Hola mundo
+              </code></div>
+              <p>
+                En la primera linea, la variable llamada <span class="i">frase</span> es creada y se le
+                asigna el valor <span class="i">"Hola mundo"</span>, entonces al llamar a la función <span
+                  class="i">print()</span>
+                se le pasa como parametro la variable <span class="i">frase</span>.
+              </p>
+              <p>
+                el output <span class="i">Hola mundo</span> es mostrado cuando ejecutas <span
+                  class="i">print(frase)</span>
+                ya que Python busca la variable <span class="i">frase</span> y encuentra que tiene asignado el valor
+                "Hola mundo".
+              </p>
+              <p>
+                Si ejecutas la linea <span class="i">print(frase)</span> antes de ejecutar <span class="i">frase = "Hola
+                  mundo"</span>
+                verás un error <span class="i">NameError</span>, ya que la variable <span class="i">frase</span> no
+                existe
+                todavía al momento de hacer referencia a ella.
+              </p>
+              <p>
+                Las variables en Python tienen algo llamado <span class="b i">Case-sensitive</span>, lo que implica que
+                una variable
+                llamada <span class="i">Frase</span> es completamente diferente de una llamada <span
+                  class="i">frase</span>, por lo que
+                escribirla distinto a como la creaste originalmente, dará un NameError.
+              </p>
+              <div class="code"><code>
+                >>> frase = "Hola mundo" <br>
+                >>> print(Frase) <br>
+                Traceback (most recent call last): <br>
+                &nbsp;&nbsp;File "&lt;pyshell#0>", line 1, in &lt;module> <br>
+                NameError: name 'Frase' is not defined
+              </code></div>
+              <br>
+              <h3>Reglas para nombres de variables válidos</h3>
+              <p>
+                Los nombres de las variables pueden ser tan largos o cortos como quieras, pero hay un par de reglas
+                que deberías seguir. Las variables solo deben tener letras mayúsculas y minúsculas, números y guiones
+                bajos,
+                además, estas no pueden empezar con números.
+              </p>
+              <p>
+                Las variables pueden contener en sus nombres una gran cantidad ve caracteres integrados en el estándar
+                Unicode.
+                <span class="b">Unicode</span> es un estándar de códificación de caracteres, esto significa que las
+                variables
+                pueden contener un montón de caracteres que no pertenecen a nuestro alfabeto, como kanjis Chinos y
+                Japoneses
+                e incluso símbolos Árabes.
+              </p>
+              <p>
+                Aún así, muchos dispositivos suelen tener problemas para mostrar algunos caracteres decorados o que se
+                encuentran
+                fuera del alfabeto inglés, por lo que es recomendable usarlos lo menos posible en caso de trabajar con
+                más personas.
+              </p>
+              <p>
+                <span class="b">Unicode</span> es un tema apasionante que por desgracia se queda fuera del tema de este
+                curso,
+                pero tengo la intención de hablar sobre eso en un post más adelante, cuando lo haga pondré un enlace
+                aquí para
+                ir a ese artículo. Por ahora, dejaré un enlace a la entrada sobre el tema en la Wikipedia en español.
+                <a href="https://es.wikipedia.org/wiki/Unicode" class="link">haz click aquí si quieres saber más</a>.
+              </p>
+              <p>
+                Que el nombre de una variable sea valido no significa que sea un buen nombre. Elegir un buen nombre para
+                las variables
+                puede ser sorpresivamente difícil en algunas ocasiones, pero en cualquier caso, te dejo aquí una pequeña
+                guía
+                que puede llegar a servirte para elegir un buen nombre.
+              </p>
+              <br>
+              <h3>Un nombre descriptivo es mejor que un nombre corto</h3>
+              <p>
+                Los nombres descriptivos para las variables son esenciales, especialmente para programas complejos.
+                A menudo, las variables descriptivas requieren varias palabras, así que no te preocupes por utilizar
+                nombres largos.
+              </p>
+              <div class="code"><code>>>> d = 7</code></div>
+              <p>
+                En este ejemplo, la d es un nombre completamente ambiguo, usar una palabra completa puede hacerlo más
+                entendible
+              </p>
+              <div class="code"><code>>>> dias = 7</code></div>
+              <p>
+                <span class="i">dias</span> es un nombre mejor que <span class="i">d</span> ya que brinda contexto,
+                pero sigue sin ser suficiente, ¿7 es la cantidad de días de qué? ¿días restantes para la entrega de un
+                paquete?
+                ¿los días desde que se hizo un registro?
+              </p>
+              <div class="code"><code>>>> dias_por_semana = 7</code></div>
+              <p>
+                ahora no hay forma de pensar cualquier otra cosa, 7 es la cantidad de dias en una semana, y sí
+                puede parecer un ejemplo tonto, además que escribir <span class="i">dias_por_semana</span>
+                toma mucho más tiempo que simplemente escribir <span class="i">dias</span> o <span class="i">d</span>,
+                pero creeme, cuando tienes cantidades enormes de código que leer, con grandes cantidades de variables,
+                o es un código que no has tocado en meses, o es el código de otra persona, una simple elección adecuada
+                a la hora
+                de nombrar las variables puede ahorrar una cantidad enorme de tiempo y hacer que todo sea mucho más
+                fácil de entender.
+              </p>
+              <p>
+                Siempre ten presente una cosa, las computadoras interpretan código, no les importa que nombre les des
+                siempre y cuando cumplan la regla de no empezar con números o caracteres ajenos a Unicode,
+                pero las personas somos diferentes, las máquinas interpretan código, nosotros <span
+                  class="b i">leemos</span> código,
+                hacer de este proceso lo más eficiente posible, es una necesidad.
+              </p>
+              <p>
+                Hay diferentes maneras de escribir más de una palabra en el nombre de una variable, está el conocido
+                <span class="b">camelCase</span>, por ejemplo <span class="i">numAlumnos</span> o <span
+                  class="i">ListaDeNombres</span>.
+                Este se llama así debido a que las mayúsculas al inicio de cada nueva palabra simulan las jorobas de los
+                camellos.
+              </p>
+              <p>
+                También está el caso de <span class="b">snake_case</span> que utiliza guiones bajos, como <span
+                  class="">num_alumnos</span>
+                Este es el estilo recomendado en el <a href="https://pep8.org/" class="link">PEP 8</a>,
+                un documento que contiene las reglas "oficiales" de estílo, o más bien las recomendadas al escribir
+                código Python.
+              </p>
+              <p>
+                Realmente puedes utilizar el estílo que te parezca más agradable a ti, pero lo realmente importante es
+                que
+                tengas <span class="b i">consistencia</span> a la hora de escribir código.
+                En el momento que te decidas por un estilo, utilizalo siempre durante todo el proyecto.
+              </p>
+              <br><br>
+              <h2>Primer programa utilizando variables</h2>
+              <p>
+                Finalmente, vamos a crear nuestro primer programa utilizando variables con todo lo que hemos
+                aprendido durante este post. Abre el editor de código de tu preferencia o el IDLE de Python y escribe
+                el siguiente código en el, ahora iremos comentando poco a poco lo que este hace para finalizar.
+              </p>
+              <img src="img/codigo_01.png" alt="código Python" class="img">
+              <p>
+                como mencioné antes, en Windows es muy probable que al arrancar este código se cierre automáticamente,
+                por lo que recomendaría utilizar la instrucción <span class="i">input()</span> en la última linea
+                para evitar que esta se cierre hasta presionar enter.
+              </p>
+              <p>Muy bien, expliquemos linea por linea lo que ocurre aquí.</p>
+              <p>
+                En la linea 1 tenemos una instrucción conocida, imprimimos el texto <span class="i">"Hola mundo"</span>
+                en pantalla, nada nuevo. <br> Del mismo modo, en la linea 3, imprimimos un texto, concretamente
+                <span class="i">"¿Cuál es tu nombre?"</span>
+              </p>
+              <p>
+                En la linea 4, creamos una variable llamada <span class="i">mi_nombre</span> y hacemos uso del operador
+                de asignación para darle el valor... <span class="i">input()</span>?
+              </p>
+              <p>
+                La función <span class="i">input()</span>, como quizá ya habrás supuesto, sirve para tomar un input del
+                usuario,
+                leer lo que escribe en la consola y lo convierte en un valor de tipo string. Entonces, esta linea de
+                código,
+                básicamente hace eso, toma lo que el usuario escriba y lo almacena en la variable <span
+                  class="i">mi_nombre</span>.<br>
+                Hablaremos del tema de los tipos de variables en el siguiente post, por ahora solo hay que entender eso.
+              </p>
+              <p>
+                la linea 6 es un poco más complicada de entender, pero no demasiado, quizá lo único que puede llegar
+                acausar
+                confusión es el uso del operado <span class="red">+</span>, eso se debe a que en Python, este simbolo
+                tiene más de un
+                significado, cuando este se utiliza con valores de tipo string, se convierte en el operador de
+                <span class="i">concatenación</span>.
+              </p>
+              <p>
+                Imaginemos que al ejecutar el programa ingresas el nombre David, entonces la forma en la que Python
+                evalúa esas operaciones es la siguiente:
+              </p>
+              <ul>
+                <li>'¡Hola ' + mi_nombre + ' es un placer conocerte!'</li>
+                <li>'¡Hola ' + 'David' + ' es un placer conocerte!'</li>
+                <li>'¡Hola David' + ' es un placer conocerte!'</li>
+                <li>'¡Hola David es un placer conocerte!'</li>
+              </ul>
+              <p>
+                Entonces cuando termina este proceso imprime el string resultante por pantalla. <br>
+                Para finalizar dejaré este ejemplo de la ejecución del programa.
+              </p>
+              <div class="code"><code>
+                >>> ==================== RESART ==================== <br>
+                >>> <br>
+                ¡Hola mundo! <br>
+                ¿Cuál es tu nombre? <br>
+                <span class="b">David</span> <br>
+                ¡Hola David es un placer conocerte! <br>
+                >>>
+              </code></div>
+              <p>Como ya mencioné antes, en el próximo post, hablaremos sobre los tipos de variables.</p>
+              <p>
+                Se que estamos dejando muchas cosas sin explicar, además que estos post se vuelven un poco largos,
+                pero es completamente necesario para entender estas bases, pero prometo que en cuanto veamos el siguiente tema,
+                empezará la cumbia de verdad, empezaremos con ejercicios y podremos entrar en temas que den mucho más dinamismo
+                a nuestros programas.
+              </p>
+              <br><br><br>
+              <a href="../indice_python.html">
+                <button class="btn post-btn"><i class="fas fa-arrow-left"></i>&nbsp; Volver</button>
+              </a>
+            </div>
+          </div>
+
+
+        </div>
+        <aside class="sidebar">
+          <div class="category">
+            <h2>Categorías</h2>
+            <ul class="category-list">
+              <li class="list-items" data-aos="fade-left" data-aos-delay="100">
+                <a href="../indice_python.html">Python</a>
+              </li>
+              <li class="list-items" data-aos="fade-left" data-aos-delay="400">
+                <a href="../../../src/blog/indice_blog.html">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!---X---Site Content---X--->
+  </main>
+
+  <!---X---Main Site Section---X--->
+
+
+  <!-------Footer------->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="about-us">
+        <h2>Sobre este sitio</h2>
+        <p class="about">Lambda Lain es un sitio que nace con la idea de devolver al internet una parte de todo el
+          conocimiento que me ha regalado.</p>
+      </div>
+      <div class="follow">
+        <h2>Redes</h2>
+        <p class="about">Contacta conmigo</p>
+        <div>
+          <a target="_blank" href="https://twitter.com/Reli_Salazar"><i class="fab fa-twitter"></i></a>
+          <a target="_blank" href="https://www.facebook.com/rlslzr/"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <div class="donations">
+        <h2>¿Quieres apoyar el contenido?</h2>
+        <a target="_blank" href="https://ko-fi.com/N4N11H07D">
+          <p class="about">Invitame un café haciendo click aquí</p>
+          <img src="../../../src/kofi_logo.png" class="img" width="80">
+        </a>
+      </div>
+    </div>
+    <div class="move-up">
+      <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+    </div>
+  </footer>
+
+  <!---X---Footer---X--->
+
+
+  <!-------JQuery Library file------->
+  <script src="../../../js/jquery3.4.1.min.js"></script>
+
+
+  <!-------Custom Javascript file------->
+  <script src="../../../js/main.js"></script>
+
+  <!-------AOS JS Library------->
+  <script src="../../../js/aos.js"></script>
+</body>
+
+</html>
