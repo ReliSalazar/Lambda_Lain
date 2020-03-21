@@ -37,6 +37,11 @@ ul {
     list-style-type: none;
 }
 
+.list li:before {
+    content: "λ ";
+    color: var(--red);
+}
+
 h1 {
     font-family: var(--SpaceMono);
     font-size: 2.5rem;
