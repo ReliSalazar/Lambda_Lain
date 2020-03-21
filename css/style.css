@@ -37,6 +37,11 @@ ul {
     list-style-type: none;
 }
 
+.list li:before {
+    content: "λ ";
+    color: var(--red);
+}
+
 h1 {
     font-family: var(--SpaceMono);
     font-size: 2.5rem;
@@ -265,6 +270,12 @@ main .post-content .post-title a {
     padding: .7rem 1.5rem;
     background: var(--purple);
     color: var(--light);
+}
+
+.site-content .post-content .post-title .post-btn:hover {
+    background: transparent;
+    border: 1px solid var(--purple);
+    color: var(--purple);
 }
 
 /*---X---Site Content---X---*/

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Lambda Lain" />
+  <meta property="og:description" content="Blog de tecnología y programación" />
+  <meta property="og:image" content="https://imgur.com/a/sQIUv5J" />
+  <link rel="shortcut icon" href="../../../assets/favicon.png">
+  <title>Lambda Lain</title>
+
+  <!-------Font Awesome Icons------->
+  <link rel="stylesheet" href="../../../css/all.css">
+
+  <!-------AOS Library------->
+  <link rel="stylesheet" href="../../../css/aos.css">
+
+  <!-------Custom Style------->
+  <link rel="stylesheet" href="../../../css/style.css">
+  <link rel="stylesheet" href="../../../css/post.css">
+</head>
+
+<body>
+  <!-------Navigation------->
+  <nav class="nav">
+    <div class="nav-menu flex-row">
+      <div class="nav-brand">
+        <a href="../../../index.html" class="nav-link">Lambda Lain</a>
+      </div>
+      <div class="toggle-collapse">
+        <div class="toggle-icons">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+      <div>
+        <ul class="nav-items">
+          <li class="nav-link">
+            <a href="../../../index.html">Inicio</a>
+          </li>
+          <li class="nav-link">
+            <a href="../../../src/python/indice_python.html">Python</a>
+          </li>
+          <li class="nav-link">
+            <a href="../../../src/blog/indice_blog.html">Blog</a>
+          </li>
+        </ul>
+      </div>
+      <div class="social text-purple">
+        <a target="_blank" href="https://github.com/ReliSalazar"><i class="fab fa-github"></i></a>
+        <a target="_blank" href="https://gitlab.com/Reli"><i class="fab fa-gitlab"></i></a>
+        <a target="_blank" href="https://twitter.com/Reli_Salazar"><i class="fab fa-twitter"></i></a>
+        <a target="_blank" href="https://www.facebook.com/rlslzr/"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </nav>
+  <!---X---Navigation---X--->
+
+
+  <!-------Main Site Section------->
+
+  <main>
+    <!-------Site Content------->
+
+    <section class="container">
+      <div class="site-content">
+        <div class="posts">
+          <div class="post-content" data-aos="flip-left" data-aos-delay="300">
+            <div class="post-image">
+              <div>
+                <img src="../curso_python.png" class="img" alt="curso de python">
+              </div>
+              <div class="post-info flex-row">
+                <span><i class="fas fa-user"></i>&nbsp;&nbsp;Reli</span>
+                <span><i class="fas fa-calendar-alt"></i>&nbsp;&nbsp;Marzo 21, 2020</span>
+              </div>
+            </div>
+            <div class="post-title">
+              <h1>5 - Errores</h1>
+              <p>
+                A la hora de programar existen dos clases de errores que todos experimentamos,
+                los errores de sintaxis o <strong>Syntax errors</strong> y los errores en tiempo de
+                ejecución o <strong>Run-time errors</strong>. Ahora verémos un par de errores
+                y aprenderemos como aprovechar el mensaje que nos da Python cuando ocurre un error
+                para entender que error ocurió y que parte del código lo provocó.
+              </p>
+              <br><br>
+              <h2>Syntax Errors o Errores de Sintaxis</h2>
+              <p>
+                En un gran resumen, los errores de sintaxis ocurren cuando escribimos algo en el código
+                que no está contemplado por el lenguaje de programación. Podemos crear un Syntax Error
+                cambiando el contenido en el archivo <span class="i">hello_world.py</span> de la entrada
+                anterior, haciendo algo como lo siguiente:
+              </p>
+              <img src="./img/codigo_01.png" alt="código python" class="img">
+              <p>
+                En este ejemplo, la segunda comilla simple ( ' ) al final de <span class="i">'Hola mundo!'</span>
+                fue eliminada, sin esta, Python no sabe en donde termina el string. Si guardamos este código y lo
+                intentamos correr, veremos que el código no puede ser ejecutado y veremos lo siguiente en la consola
+              </p>
+              <div class="code"><code>
+                EOL while scanning string literal.
+              </code></div>
+              <p>
+                <span class="b">EOL</span> significa <span class="b">E</span>nd <span class="b">O</span>f <span class="b">L</span>ine,
+                es decir <span class="b i">Final de linea</span>, básicamente este mensaje te dice que Python
+                leyó hasta el final de la linea sin encontrar el final de algo llamado <span class="i">string literal</span>
+              </p>
+              <p>
+                Dependiendo de que editor uses, es probable que esta linea se marque en rojo indicando un error,
+                esta es una forma que tienen tanto los editores de código como el IDLE de Python para ayudarte
+                a evitar errores o poder encontrarlos mucho más rápido.
+              </p>
+              <br><br>
+              <h2>Run-time Errors o Errores en Tiempo de Ejecución</h2>
+              <p>
+                El IDLE y los editores de código pueden encontrar errores de sintaxis antes de que estos ocurran,
+                pero existen algunos errores que no pueden ser encontrados hasta que el programa se a ejecutado,
+                los errores en tiempo de ejecución.
+              </p>
+              <p>
+                Podemos forzar un run-time error cambiando el código en nuestro archivo <span class="i">hello_world.py</span>
+                de la siguiente manera
+              </p>
+              <img src="./img/codigo_02.png" alt="código python" class="img">
+              <p>
+                Ahora hemos removido ambas comillas del string, como puedes notar, tanto el IDLE como los editores de código
+                reconoces este texto del mismo modo en que lo hacían con las variables, pero veamos que ocurre al intentar ejecutar
+              </p>
+              <div class="code"><code>
+                Traceback (most recent call last): <br>
+                &emsp;&emsp;File "hello_world.py", line 1, in &lt;module> <br>
+                &emsp;&emsp;&emsp;&emsp;print(Hola mundo!) <br>
+                NameError: name 'Hola' is not defined
+              </code></div>
+              <p>
+                El texto mostrado al tener un error es llamado <span class="b i">Traceback</span>.
+                Los tracebacks nos dan información útil sobre el error, el anterior nos dice lo suguiente
+              </p>
+              <ul class="list">
+                <li>El error ocurre en la linea 1 del archivo <span class="i">hello_world.py</span></li>
+                <li>La linea que genera el error es <span class="i">print(Hola mundo!)</span></li>
+                <li>Ocurrió un error del tipo <span class="i">NameError</span></li>
+                <li>El error específico es <span class="i">name 'Hola' is not defined</span></li>
+              </ul>
+              <p>
+                al quitar las comillas del string, Python no puede reconocerlo como tal, y piensa que
+                tanto <span class="i">Hola</span> como <span class="i">Mundo</span> son cosas diferentes
+                que no han sido declaradas en el código.
+              </p>
+              <p>
+                Por ahora eso es todo, en la siguiente entrada veremos más a fondo el tema de los strings,
+                aprenderemos a trabajar con ellos utilizando distintos métodos, crearlos, imprimirlos y guardarlos,
+                por ahora te dejo un par de ejercicios muy simples sobre este tema.
+              </p>
+              <ul class="list">
+                <li>Crea un script que el IDLE no te deje correr debido a un Syntax Error</li>
+                <li>Crea un script que solo crashee una vez tu programa esté funcionando debido a un Run-time Error</li>
+              </ul>
+              <br><br><br>
+              <a href="../indice_python.html">
+                <button class="btn post-btn"><i class="fas fa-arrow-left"></i>&nbsp; Volver</button>
+              </a>
+            </div>
+          </div>
+
+
+        </div>
+        <aside class="sidebar">
+          <div class="category">
+            <h2>Categorías</h2>
+            <ul class="category-list">
+              <li class="list-items" data-aos="fade-left" data-aos-delay="100">
+                <a href="../indice_python.html">Python</a>
+              </li>
+              <li class="list-items" data-aos="fade-left" data-aos-delay="400">
+                <a href="../../../src/blog/indice_blog.html">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!---X---Site Content---X--->
+  </main>
+
+  <!---X---Main Site Section---X--->
+
+
+  <!-------Footer------->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="about-us">
+        <h2>Sobre este sitio</h2>
+        <p class="about">Lambda Lain es un sitio que nace con la idea de devolver al internet una parte de todo el
+          conocimiento que me ha regalado.</p>
+      </div>
+      <div class="follow">
+        <h2>Redes</h2>
+        <p class="about">Contacta conmigo</p>
+        <div>
+          <a target="_blank" href="https://twitter.com/Reli_Salazar"><i class="fab fa-twitter"></i></a>
+          <a target="_blank" href="https://www.facebook.com/rlslzr/"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <div class="donations">
+        <h2>¿Quieres apoyar el contenido?</h2>
+        <a target="_blank" href="https://ko-fi.com/N4N11H07D">
+          <p class="about">Invitame un café haciendo click aquí</p>
+          <img src="../../../src/kofi_logo.png" class="img" width="80">
+        </a>
+      </div>
+    </div>
+    <div class="move-up">
+      <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+    </div>
+  </footer>
+
+  <!---X---Footer---X--->
+
+
+  <!-------JQuery Library file------->
+  <script src="../../../js/jquery3.4.1.min.js"></script>
+
+
+  <!-------Custom Javascript file------->
+  <script src="../../../js/main.js"></script>
+
+  <!-------AOS JS Library------->
+  <script src="../../../js/aos.js"></script>
+</body>
+
+</html>
