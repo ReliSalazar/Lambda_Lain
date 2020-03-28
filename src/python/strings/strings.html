@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Lambda Lain" />
+  <meta property="og:description" content="Blog de tecnología y programación" />
+  <meta property="og:image" content="https://imgur.com/a/sQIUv5J" />
+  <link rel="shortcut icon" href="../../../assets/favicon.png">
+  <title>Lambda Lain</title>
+
+  <!-------Font Awesome Icons------->
+  <link rel="stylesheet" href="../../../css/all.css">
+
+  <!-------AOS Library------->
+  <link rel="stylesheet" href="../../../css/aos.css">
+
+  <!-------Custom Style------->
+  <link rel="stylesheet" href="../../../css/style.css">
+  <link rel="stylesheet" href="../../../css/post.css">
+</head>
+
+<body>
+  <!-------Navigation------->
+  <nav class="nav">
+    <div class="nav-menu flex-row">
+      <div class="nav-brand">
+        <a href="../../../index.html" class="nav-link">Lambda Lain</a>
+      </div>
+      <div class="toggle-collapse">
+        <div class="toggle-icons">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+      <div>
+        <ul class="nav-items">
+          <li class="nav-link">
+            <a href="../../../index.html">Inicio</a>
+          </li>
+          <li class="nav-link">
+            <a href="../../../src/python/indice_python.html">Python</a>
+          </li>
+          <li class="nav-link">
+            <a href="../../../src/blog/indice_blog.html">Blog</a>
+          </li>
+        </ul>
+      </div>
+      <div class="social text-purple">
+        <a target="_blank" href="https://github.com/ReliSalazar"><i class="fab fa-github"></i></a>
+        <a target="_blank" href="https://gitlab.com/Reli"><i class="fab fa-gitlab"></i></a>
+        <a target="_blank" href="https://twitter.com/Reli_Salazar"><i class="fab fa-twitter"></i></a>
+        <a target="_blank" href="https://www.facebook.com/rlslzr/"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </nav>
+  <!---X---Navigation---X--->
+
+
+  <!-------Main Site Section------->
+
+  <main>
+    <!-------Site Content------->
+
+    <section class="container">
+      <div class="site-content">
+        <div class="posts">
+          <div class="post-content" data-aos="flip-left" data-aos-delay="300">
+            <div class="post-image">
+              <div>
+                <img src="../curso_python.png" class="img" alt="curso de python">
+              </div>
+              <div class="post-info flex-row">
+                <span><i class="fas fa-user"></i>&nbsp;&nbsp;Reli</span>
+                <span><i class="fas fa-calendar-alt"></i>&nbsp;&nbsp;Marzo 28, 2020</span>
+              </div>
+            </div>
+            <div class="post-title">
+              <h1>6 - Strings</h1>
+              <p>
+                En la mayoría de los campos de la programación trabajamos procesando texto,
+                ya sea para almacenar información dada por los usuarios o capturada desde
+                diferentes sitios para procesar esa información para sacar algo de ella.<br>
+                Las colecciones de Texto en python se llaman <strong>strings</strong> y
+                las funciones especiales que se utilizan para trabajar con ellas se llaman
+                <strong>string methods</strong> y nos sirven para convertir un texto a mayúsculas,
+                minúsculas, eliminar espacios blancos al inicio o final de un texto o sustitur
+                partes de un texto por otro.
+              </p>
+              <br><br>
+              <h2>El tipo de dato string o string data type</h2>
+              <p>
+                Los strings son uno de los tipos de datos fundamentales de Python y son utilizados
+                para representar texto. Decimos que es un tipo de dato <span class="b i">fundamental</span>
+                ya que este no puede ser descompuesto en otros valores más pequeños de un tipo distinto.
+                No todos los tipos de datos son fundamentales, pero eso lo veremos mucho más adelante con
+                los tipos de datos compuestos.
+              </p>
+              <p>
+                El tipo string tiene una abreviación especial en python, <span class="b i red">str</span>.
+                Puedes ver esto utilizando la función <span class="b i">type()</span>, que se utiliza
+                para determinar el tipo de dato del valor que se pase por parametro.
+              </p>
+              <div class="code"><code>
+                >>> type("hola, mundo") <br>
+                &lt;class 'str'>
+              </code></div>
+              <p>
+                el output <span class="b i">&lt;class 'str'></span> indica que el valor
+                <span class="i">"hola, mundo"</span> es una instancia del tipo de dato
+                <span class="b i red">str</span>, es decir, <span class="i">"hola, mundo"</span>
+                es un string.
+              </p>
+              <p>
+                Podrás notar que también hay otra palabra especial por ahí, <span class="i red">class</span>,
+                por ahora, puedes entender esta palabra como un sinónimo de <span class="i">tipo de dato</span>
+                o <span class="i">data type</span>, aunque se refiere a algo mucho más específico, no hablaremos
+                de eso hasta mucho más adelante en el curso.
+              </p>
+              <p>
+                los strings tienen tres propiedades que iremos viendo poco a poco:
+              </p>
+              <ul class="list">
+                <li>contienen caracteres o <span class="b red">characters</span> que son letras o símbolos</li>
+                <li>tienen un tamaño o <span class="b red">length</span> que es el numero de caracteres
+                  del string</li>
+                <li>los caracteres en un string aparecen en una <span class="b red">secuencia</span>
+                  es decir, cada caracter tiene una posición numerada</li>
+              </ul>
+              <br><br>
+              <h2>String literals</h2>
+              <p>
+                Como ya hemos visto, puedes crear un string rodeando algo por comillas dobles (") o
+                comillas simples ('):
+              </p>
+              <div class="code"><code>
+                string1 = "hola mundo" <br>
+                string2 = '1234'
+              </code></div>
+              <p>
+                Sin importar si usas comillas dobles o simples, ambos siguen siendo lo mismo. <br>
+                Cuando creas un string rodeandolo por comillas, el texto es llamado
+                <span class="b">string literal</span>. El nombre indica que el string es literalmente
+                escrito en tu código, por ejemplo, todos los strings que hemos visto hasta ahora, son
+                string literals.
+              </p>
+              <p>
+                Pero no todos los strings en un programa son string literals, un ejemplo sería texto
+                ingresado por el usuario o leído desde un archivo, hablaremos de eso más adelante en el curso.
+              </p>
+              <p>
+                Las comillas que rodean al texto de un string son llamados <span class="b i">delimiters</span>
+                o delimitadores, ya que le dicen a Python donde empieza y donde termina un string.
+                Cuando usas un tipo de comillas, ese mismo tipo de comilla debe ser usado para el inicio y el final,
+                por lo que, puedes usar el otro tipo de comilla dentro:
+              </p>
+              <div class="code"><code>
+                string3 = "we're number 1" <br>
+                string4 = 'Y AC dijo: "hágase la luz"'
+              </code></div>
+              <p>
+                Una vez Python lee el primer delimitador, considera todo lo que está a su derecha
+                como parte del string, hasta que encuentra otro delimitador que sea el mismo tipo de comilla
+                que el primero, es por eso que el ejemplo anterior funciona. Utilizar el mismo tipo de
+                comilla causará un <span class="i">SyntaxError</span> ya que al encontrarse con el segundo
+                delimitador, no sabrá interpretar el resto del código.
+              </p>
+              <p>
+                Uno de los pequeños errores más comunes es el uso mezclado de comillas dobles y simples constante.
+                Cuando trabajas en un proyecto, es una buena idea utilizar solo comillas simples o dobles para
+                cualquier string a menos que sea completamente necesario el uso del otro tipo de comilla.
+              </p>
+              <p>
+                Ten en mente que realmente no hay una elección correcta o incorrecta, la verdadera meta
+                es ser <span class="b i red">consistente</span> ya que la consistencia ayuda a que tu código
+                sea más fácil de leer, es un favor para la gente que lea tu código, incluyéndote.
+              </p>
+              <br><br>
+              <h2>Determinar el tamaño de un string</h2>
+              <p>
+                La cantidad de caracteres (incluidos espacios) en un string es conocido como
+                <span class="i red">length</span>, por ejemplo, el string <span class="i">'abcd'</span>
+                tiene un length o tamaño de 4, y el string <span class="i">'Hola mundo'</span> tiene
+                un tamaño de 10.
+              </p>
+              <p>
+                Para determinar el length de un string puedes usar la función <span class="b i red">len()</span>:
+              </p>
+              <div class="code"><code>
+                >>> len('abcd') <br>
+                4
+              </code></div>
+              <p>
+                también puedes usar la función <span class="i red">len()</span> para obtener el tamaño de un
+                string asignado a una variable:
+              </p>
+              <div class="code"><code>
+                >>> letras = 'abcd' <br>
+                >>> num_letras = len(letras) <br>
+                >>> num_letras <br>
+                4
+              </code></div>
+              <p>
+                primero, el string <span class="i">'abcd'</span> es asignado a la variable letras,
+                entonces se utiliza la función <span class="i">len()</span> para conseguir el tamaño del
+                string y almacenarlo en la variable <span class="i">num_letras</span> y finalmente,
+                el valor de <span class="i">num_letras</span> es 4 y es mostrado.
+              </p>
+              <br><br>
+              <h2>Strings multilinea</h2>
+              <p>
+                la guía de estilos
+                <a target="_blank" href="https://pep8.org/#maximum-line-length" class="link">PEP8</a>
+                recomienda que cada linea en el código Python no contenga más de 79 caracteres, incluyendo
+                espacios.
+              </p>
+              <p>
+                Esto se recomienda porque, entre muchas otras razones, hace que sea más fácil de leer
+                dos archivos uno a un lado de otro. En cualquier caso, muchos programadores creen que
+                forzar a que el código tenga un máximo de 79 caracteres por linea puede hacer que sea
+                difícil de leer por si mismo algunas veces.
+              </p>
+              <p>
+                Esto lo comento ya que, en la vida real, encontrarás muchos programas que pasan este limite
+                y otros que lo siguen de manera rigurosa. En lo personal creo que todas estas recomendaciones
+                deben ser eso, recomendaciones y nada más, sigue tu propio criterio y sí crees que pasarte
+                un par de caracteres puede hacer que sea más fácil leer tu código, entonces hazlo, pero
+                dentro de lo posible, sigue las recomendaciones a menos que no sea conveniente. <br>
+                La legibilidad ante todo.
+              </p>
+              <p>
+                En cualquier caso, ya sea que decidas seguir las recomendaciones a rajatabla o ponerte un limite
+                de caracteres mayor, de vez en cuando puede que te veas en la necesidad de crear strings
+                mucho, mucho, mucho más largos que el limite que te hayas puesto.
+              </p>
+              <p>
+                Para trabajar con estros string literals tan largos, Python nos ofrece varias opciones para
+                trabajar con <span class="i">strings multilinea</span>
+              </p>
+              <p>
+                para explicar estas distintas formas, hagamoslo con ejemplos, el primero un parrafo de
+                <span class="b red">Cronicas Marcianas</span> de <span class="b">Ray Bradbury</span>
+              </p>
+              <div class="code"><code>
+                parrafo = "Stendahl mojó un ladrillo en el mortero, cantando entre dientes. \ <br>
+                Ahora había golpes y gritos y llantos en la celda cada vez más oscura. La \ <br>
+                pared crecía lentamente.- Un poco más de ruido, por favor - dijo Stendahl -. \ <br>
+                Representemos bien la escena.- ¡Déjenme salir! ¡Déjeme salir! Sólo faltaba \ <br>
+                un ladrillo. Los gritos eran ahora continuos.- ¿Garrett? - llamó Stendahl. \ <br>
+                en voz baja. Garrett calló -. ¿Sabe usted por qué le hagoesto? Porque quemó \ <br>
+                los libros del señor Poe sin haberlo leído. Le bastó la opinión de los \ <br>
+                demás. Si hubiera leído los libros, habría adivinado lo que yo le iba a \ <br>
+                hacer, cuandobajamos hace un momento. La ignorancia es fatal, señor Garrett."
+              </code></div>
+              <p>
+                El uso de las barras invertidas (\) nos permite indicar al interprete que habrá
+                un salto de linea que debe ser ignorado, y que la siguiente linea forma parte del mismo
+                string, es decir, aunque en el código se escriba con multiples lineas, si impimimos
+                la variable parrafo, veremos que se mantiene como una sola linea.
+              </p>
+              <p>
+                Ahora un ejemplo con un poema,
+                <span class="b red">El Suicida</span> de <span class="b">Jorge Luis Borges</span>:
+              </p>
+              <div class="code"><code>
+                poema = """No quedará en la noche una estrella. <br>
+                No quedará la noche. <br>
+                Moriré y conmigo la suma <br>
+                del intolerable universo. <br>
+                Borraré las pirámides, las medallas, <br>
+                los continentes y las caras. <br>
+                Borraré la acumulación del pasado. <br>
+                Haré polvo la historia, polvo el polvo. <br>
+                Estoy mirando el último poniente. <br>
+                Oigo el último pájaro. <br>
+                Lego la nada a nadie."""
+              </code></div>
+              <p>
+                En este caso utilizamos tres comillas dobles, aunque también puede hacerse con comillas simples,
+                además esta manera de realizar un string multilinea, mantiene los espacios, por lo que si pones
+                espacios extra del lado izquierdo de alguna de las lineas, estas se mantendrán.
+              </p>
+              <p>
+                Es importante recalcar una cosa, y es que los strings con tres comillas tienen un
+                proposito especial en Python y es que son utilizados para documentar el código.
+                Usualmente puedes encontrarlo en la parte superior de un archivo <span class="i">.py</span>
+                con una descripción del código, del mismo modo, también son utilizados para documentar funciones.
+                Cuando los strings con triple comilla son utilizados para documentar código, se les llama
+                <span class="b ib">docstrings</span>, hablaremos de eso un poco más a fondo más adelante en el curso.
+              </p>
+              <br><br>
+              <p>
+                Por ahora, creo que esto es más que suficiente para un solo post, en el siguiente veremos
+                concatenación, indexación y slicing de un string, pero por ahora, un par de ejercicios sencillos
+                mientras tanto:
+              </p>
+              <ul class="list">
+                <li>Imprimir un string que use comillas dobles dentro de un string.</li>
+                <li>Imprimir un string que use un apóstrofo o comilla simple dentro de un string.</li>
+                <li>Imprimir un string multilinea que preserve sus espacios blancos a los lados de cada linea.</li>
+                <li>Imprimir un string que haya sido programado con multilinea, pero que se muestre como
+                  una sola linea.</li>
+              </ul>
+              <br><br><br>
+              <a href="../indice_python.html">
+                <button class="btn post-btn"><i class="fas fa-arrow-left"></i>&nbsp; Volver</button>
+              </a>
+            </div>
+          </div>
+
+
+        </div>
+        <aside class="sidebar">
+          <div class="category">
+            <h2>Categorías</h2>
+            <ul class="category-list">
+              <li class="list-items" data-aos="fade-left" data-aos-delay="100">
+                <a href="../indice_python.html">Python</a>
+              </li>
+              <li class="list-items" data-aos="fade-left" data-aos-delay="400">
+                <a href="../../../src/blog/indice_blog.html">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!---X---Site Content---X--->
+  </main>
+
+  <!---X---Main Site Section---X--->
+
+
+  <!-------Footer------->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="about-us">
+        <h2>Sobre este sitio</h2>
+        <p class="about">Lambda Lain es un sitio que nace con la idea de devolver al internet una parte de todo el
+          conocimiento que me ha regalado.</p>
+      </div>
+      <div class="follow">
+        <h2>Redes</h2>
+        <p class="about">Contacta conmigo</p>
+        <div>
+          <a target="_blank" href="https://twitter.com/Reli_Salazar"><i class="fab fa-twitter"></i></a>
+          <a target="_blank" href="https://www.facebook.com/rlslzr/"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <div class="donations">
+        <h2>¿Quieres apoyar el contenido?</h2>
+        <a target="_blank" href="https://ko-fi.com/N4N11H07D">
+          <p class="about">Invitame un café haciendo click aquí</p>
+          <img src="../../../src/kofi_logo.png" class="img" width="80">
+        </a>
+      </div>
+    </div>
+    <div class="move-up">
+      <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+    </div>
+  </footer>
+
+  <!---X---Footer---X--->
+
+
+  <!-------JQuery Library file------->
+  <script src="../../../js/jquery3.4.1.min.js"></script>
+
+
+  <!-------Custom Javascript file------->
+  <script src="../../../js/main.js"></script>
+
+  <!-------AOS JS Library------->
+  <script src="../../../js/aos.js"></script>
+</body>
+
+</html>
