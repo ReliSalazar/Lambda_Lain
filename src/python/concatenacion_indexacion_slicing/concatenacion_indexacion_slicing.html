@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Lambda Lain" />
+  <meta property="og:description" content="Blog de tecnología y programación" />
+  <meta property="og:image" content="https://imgur.com/a/sQIUv5J" />
+  <link rel="shortcut icon" href="../../../assets/favicon.png">
+  <title>Lambda Lain</title>
+
+  <!-------Font Awesome Icons------->
+  <link rel="stylesheet" href="../../../css/all.css">
+
+  <!-------AOS Library------->
+  <link rel="stylesheet" href="../../../css/aos.css">
+
+  <!-------Custom Style------->
+  <link rel="stylesheet" href="../../../css/style.css">
+  <link rel="stylesheet" href="../../../css/post.css">
+</head>
+
+<body>
+  <!-------Navigation------->
+  <nav class="nav">
+    <div class="nav-menu flex-row">
+      <div class="nav-brand">
+        <a href="../../../index.html" class="nav-link">Lambda Lain</a>
+      </div>
+      <div class="toggle-collapse">
+        <div class="toggle-icons">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+      <div>
+        <ul class="nav-items">
+          <li class="nav-link">
+            <a href="../../../index.html">Inicio</a>
+          </li>
+          <li class="nav-link">
+            <a href="../../../src/python/indice_python.html">Python</a>
+          </li>
+          <li class="nav-link">
+            <a href="../../../src/blog/indice_blog.html">Blog</a>
+          </li>
+        </ul>
+      </div>
+      <div class="social text-purple">
+        <a target="_blank" href="https://github.com/ReliSalazar"><i class="fab fa-github"></i></a>
+        <a target="_blank" href="https://gitlab.com/Reli"><i class="fab fa-gitlab"></i></a>
+        <a target="_blank" href="https://twitter.com/Reli_Salazar"><i class="fab fa-twitter"></i></a>
+        <a target="_blank" href="https://www.facebook.com/rlslzr/"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </nav>
+  <!---X---Navigation---X--->
+
+
+  <!-------Main Site Section------->
+
+  <main>
+    <!-------Site Content------->
+
+    <section class="container">
+      <div class="site-content">
+        <div class="posts">
+          <div class="post-content" data-aos="flip-left" data-aos-delay="300">
+            <div class="post-image">
+              <div>
+                <img src="../curso_python.png" class="img" alt="curso de python">
+              </div>
+              <div class="post-info flex-row">
+                <span><i class="fas fa-user"></i>&nbsp;&nbsp;Reli</span>
+                <span><i class="fas fa-calendar-alt"></i>&nbsp;&nbsp;Abril 09, 2020</span>
+              </div>
+            </div>
+            <div class="post-title">
+              <h1>7 - Concatenación, Indexación y Slicing de un string</h1>
+              <p>
+                Ahora que hemos visto lo que son los strings y como crearlos, vamos a explorar
+                un par de cosas que se pueden hacer con estos.
+              </p>
+              <br><br>
+              <h2>Concatenación de strings</h2>
+              <p>
+                Dos strings pueden ser combinadas, o <strong>concatenadas</strong> usando el operador +:
+              </p>
+              <div class="code"><code>
+                >>> string1 = "super" <br>
+                >>> string2 = "mercado" <br>
+                >>> concatenadas = string1 + string2 <br>
+                >>> concatenadas <br>
+                'supermercado'
+              </code></div>
+              <p>
+                En este ejemplo la Concatenación ocurre en la tercer linea.
+                <span class="i">string1</span> y <span class="i">string2</span> se concatenan usando +
+                y el resultado es asignado a la variable <span class="i">concatenadas</span>. Es importante
+                notar que las dos cadenas son unidas sin ningún espacio en blanco entre ambas.
+              </p>
+              <p>
+                Puedes usar la Concatenación de strings para unir dos strings relacionadas, como por ejemplo
+                El nombre y apellido de una persona para conseguir su nombre completo:
+              </p>
+              <div class="code"><code>
+                >>> nombre = "Brandon" <br>
+                >>> apellido = "Sanderson" <br>
+                >>> nombre_completo = nombre + " " + apellido <br>
+                >>> nombre_completo
+                'Brandon Sanderson'
+              </code></div>
+              <p>
+                Aquí la concatenación ocurre dos veces en la misma linea. <span class="i">nombre</span>
+                es concatenado con " ", resultando en el string <span class="i">"Brandon "</span>. Entonces este
+                resultadoes concatenado con <span class="i">apellido</span> y produce el nombre
+                completo "Brandon Sanderson". Finalmente, este resultado es almacenado en la variable
+                <span class="i">nombre_completo</span>
+              </p>
+              <br><br>
+              <h2>Indexación de strings</h2>
+              <p>
+                cada caracter en un string tiene una posición numerada llamada <span class="b">index</span>. <br>
+                Puedes acceder al caracter almacenado en la posición <span class="b i">N</span> poniendo
+                el número <span class="i">N</span> entre dos square brackets, llaves cuadradas
+                ( <span class="b">[</span> y <span class="b">]</span> ) inmediatamente después del string:
+              </p>
+              <div class="code"><code>
+                >>> sabor = "vainilla"
+                >>> sabor[1]
+                'a'
+              </code></div>
+              <p>
+                <span class="i">sabor[1]</span> retorna el caracter en la posición <span class="i">1</span>
+                en "vainilla", que es <span class="i">a</span>.
+                Espera, ¡no se supone qué <span class="i">v</span> es el primer caracter en "vainilla"?
+              </p>
+              <p>
+                En Python─y la muchos otros lenguajes de programación─se empieza a contar desde cero. Para
+                acceder al caracter al inicio de un string, necesitas acceder al caracter en la posición 0:
+              </p>
+              <div class="code"><code>
+                >>> sabor[0]
+                'v'
+              </code></div>
+              <p>
+                Es importante recordar que se empieza a contar desde cero, pues esta suele ser la raíz de
+                muchos de los errores más comunes y son fuente de mucha frustración tanto para novatos como
+                programadores experimentados.
+              </p>
+              <p>En la siguiente imagen se muestra el indice por cada caracter en el string "vainilla"</p>
+              <img src="./img/index_por_caracter.png" alt="caracteres con su respectivo indice" class="img">
+              <p>
+                También es importante tener en cuenta que si la cadena tiene espacios en blanco, como en el caso
+                del string para representar un nombre del ejemplo anterior, el espacio en blanco también tiene un indice asignado.
+              </p>
+              <p>
+                Si intentas acceder a un indice por encima del final de un string, Python dará un <span class="i">IndexError</span>:
+              </p>
+              <div class="code"><code>
+                >>> sabor[8] <br>
+                Traceback (most recent call last): <br>
+                &emsp;&emsp;File "&lt;pyshell#4>", line 1, in &lt;module> <br>
+                &emsp;&emsp;&emsp;&emsp;sabor[8] <br>
+                IndexError: string index out of range
+              </code></div>
+              <p>
+                El último index en un string siempre es uno menos que el length del string.
+                así que si "vainilla" tiene un length de 8, el último indice es 7.
+              </p>
+              <p>
+                En Python los strings también permiten los indices negativos:
+              </p>
+              <div class="code"><code>
+                >>> sabor[-1]
+                'a'
+              </code></div>
+              <p>
+                El último caracter en un string puede ser accedido utilizando el indice -1, en el caso de <span class="i">"vainilla"</span> es la letra
+                <span class="i">a</span>. El penúltimo caracter <span class="i">"l"</span> tiene el indice -2
+                y así sucesivamente. <br>
+                La siguiente imagen muestra los indices negativos en el string <span class="i">"vainilla"</span>
+              </p>
+              <img src="./img/index_negativo_por_caracter.png" alt="caracteres con su respectivo indice negativo" class="img">
+              <p>
+                igual que con los indices positivos, Python lanzará un IndexError si se intenta acceder a un indice negativo menor que el inidice perteneciente al primer caracter en el string:
+              </p>
+              <div class="code"><code>
+                >>> flavor[-9] <br>
+                Traceback (most recent call last): <br>
+                &emsp;&emsp;File "&lt;pyshell#5>", line 1, in &lt;module> <br>
+                &emsp;&emsp;&emsp;&emsp;sabor[-9] <br>
+                IndexError: string index out of range
+              </code></div>
+              <p>
+                Puede que los indices negativos no se vean muy útiles a primera vista, pero a veces son una
+                mejor opción que los indices positivos.
+              </p>
+              <p>
+                Por ejemplo, supongamos un string dado por el usuario que se almacena en una variable
+                <span class="i">user_input</span>. Si necesitas conseguir el úlimo caracter del string ¿cómo
+                sabrías que index usar?
+              </p>
+              <p>
+                Una forma de conseguir el último caracter de un string es calcular el indice final usando <span class="i">len()</span>:
+              </p>
+              <img src="./img/codigo_01.png" alt="código Python" class="img">
+              <p>
+                Conseguir el último caracter con el index -1 toma escribir menos código y no requiere un paso
+                intermedio para calcular nada:
+              </p>
+              <img src="./img/codigo_02.png" alt="código Python" class="img">
+              <br><br>
+              <h2>Slicing de strings</h2>
+              <p>
+                Supon que necesitas un string que contenga solo las primeras tres letras del string "vainilla".
+                Puedes acceder a cada caracter con sus indices y concatenerlos todos juntos de esta forma:
+              </p>
+              <div class="code"><code>
+                >>> primeras_tres_letras = sabor[0] + sabor[1] + sabor[2] <br>
+                >>> primeras_tres_letras <br>
+                'vai'
+              </code></div>
+              <p>
+                Si necesitas más que solo las primeras letras de un string, conseguir cada caracter de forma
+                individual y concatenerlos juntos es tedioso y generaría un código innecesariamente largo.
+                Afortunadamente, Python nos da una forma de hacer esto teniendo que escribir mucho menos.
+              </p>
+              <p>
+                Puedes extraer una porción de un string, esto se llama <span class="b">substring</span> y se hace
+                usando dos puntos entre dos números de index dentro de las llaves cuadradas, algo como esto:
+              </p>
+              <div class="code"><code>
+                >>> sabor = "vainilla"
+                >>> sabor[0:3]
+                'vai'
+              </code></div>
+              <p>
+                <span class="i">sabor[0:3]</span> retorna los primeros tres caracteres del string asignado
+                a <span class="i">sabor</span>, iniciando por el caracter cn el indice 0 y continua
+                (pero no incluye) el caracter con indice 3. El rango <span class="i">[0:3]</span> de
+                <span class="i">sabor[0:3]</span> es llamado <span class="b">slice</span>. En este caso,
+                retorna un slice de "vainilla".
+              </p>
+              <p>
+                Hacer slice a strings puede ser confuso ya que el substring devuelto por el slice incluye el
+                caracter en el primer index, pero no incluye al caracter en el indice del segundo número.
+              </p>
+              <p>
+                Si omites el primer indice en un slice, Python asume que quieres iniciar con el indice 0:
+              </p>
+              <div class="code"><code>
+                >>> sabor[:5] <br>
+                'vaini'
+              </code></div>
+              <p>
+                el slice <span class="i">[:5]</span> es equivalente al slice <span class="i">[0:5]</span>,
+                así que <span class="i">sabor[:5]</span> retorna del primero hasta el quinto caracter en el
+                string <span class="i">"vainilla"</span>
+              </p>
+              <p>
+                del mismo modo, si omites el segundo indice en el slice, Python asume que quieres retornal el
+                substring que inicia con el caracter ubicado en el primer index y termine hasta el último
+                caracter en el string:
+              </p>
+              <div class="code"><code>
+                >>> sabor[5:] <br>
+                'lla'
+              </code></div>
+              <p>
+                Para <span class="i">"vainilla"</span> el slice <span class="i">[5:]</span> es equivalente al
+                slice <span class="i">[5:9]</span>.
+              </p>
+              <p>
+                Si omites tanto el primer como el segundo número en un slice, tienes como resultado un string que
+                inicia en el primer caracter con el indice 0 y termina con el último caracter del string. En
+                otras palabras, omitir ambos números en un slice, retorna el string completo:
+              </p>
+              <div class="code"><code>
+                >>> sabor[:] <br>
+                'vainilla'
+              </code></div>
+              <p>
+                Es importante notar que, a diferencia del indexado de strings, Python no manda ningún IndexError cuando intentas hacer un slice entre números que salen del rango de un string.
+              </p>
+              <div class="code"><code>
+                >>> sabor[:25] <br>
+                'vainilla' <br>
+                >>> sabor[20:30] <br>
+                ''
+              </code></div>
+              <p>
+                En este ejemplo, la primera linea tiene un slice que inicia en el primer caracter del string y
+                continua hasta, pero no incluye el caracter en el indice 25. El string asignado a sabor tiene
+                un length de 8, así que es normal esperar que esto de un error. En cambio, cualquier indice no
+                existente es ignorado y el string <span class="i">"vainilla"</span> es retornado.
+              </p>
+              <p>
+                Puedes usar números negativos en slices. Las reglas para hacer slices con números negativos son exactamente las mismas que con los slices usando números positivos:
+              </p>
+              <div class="code"><code>
+                >>> sabor[-8:-5] <br>
+                'vai'
+              </code></div>
+              <p>
+                Hay que tener en cuenta que a pesar de lo que podría creerse, el último indice al usar valores
+                negativos no es 0, cuando se usan indices negativos el último caracter no tiene el indice
+                0, por lo que usarlo no funcionará.
+              </p>
+              <div class="code"><code>
+                >>> sabor[-8:0] <br>
+                ''
+              </code></div>
+              <p>
+                En lugar de devolver el string entero <span class="i">[-8:0]</span> retorna un
+                <span class="b">empty string</span> "". Esto se debe aque el indice 0 pertenece a la parte
+                positiva de los indices en un string.
+              </p>
+              <p>
+                Si necesitas incluir el último caracter en un string en donde estés usando indices negativos
+                lo adecuado sería omitir el segundo indice:
+              </p>
+              <div class="code"><code>
+                >>> sabor[-8:]
+                'vainilla'
+              </code></div>
+              <br><br>
+              <h2>Los strings son Inmutables</h2>
+              <p>
+                Para terminar con esta sección del curso, vamos a hablar sobre una propiedad muy importante de
+                los objetos de tipo string. los strings son <strong>inmutables</strong>, lo que significa
+                que no puedes cambiarlos una vez han sido creados. Por ejemplo, veamos que pasa cuando
+                intentamos asignar una nueva letra en un caracter particular de un string:
+              </p>
+              <div class="code"><code>
+                >>> palabra = "fito" <br>
+                >>> palabra[0] = "p" <br>
+                Traceback (most recent call last): <br>
+                &emsp;&emsp;File "&lt;pyshell#6>", line 1, in &lt;module> <br>
+                &emsp;&emsp;&emsp;&emsp;palabra[0] = "p" <br>
+                TypeError: 'str' object does not support item assignament
+              </code></div>
+              <p>
+                Python lanza un TypeError y nos dice que los objetos <span class="i">str</span> no soportan
+                <span class="i">item assignament</span> o asignación de items.
+              </p>
+              <p>
+                A modo de nota, el termino <span class="i">str</span> es el nombre interno que Python tiene para
+                los datos de tipo string.
+              </p>
+              <p>
+                Si quieres cambiar un string, debes crear un nuevo string.
+              </p>
+              <div class="code"><code>
+                >>> palabra = "Bython" <br>
+                >>> palabra = "P" + palabra[1:]
+                >>> palabra
+                'Python'
+              </code></div>
+              <p>
+                Primero asignamos el string "Bython" a la variable <span class="i">palabra</span>,
+                entonces concatenamos el slice <span class="i">palabra[1:]</span>, que tiene el string
+                <span class="i">ython</span>, con la letra "P" para tener el string
+                <span class="i">"Python"</span>. Si tienes un resultado diferente aquí, asegurate de que estás
+                incluyendo el <span class="b">:</span> como parte del slice.
+              </p>
+              <br><br>
+              <p>
+                Hemos terminado por ahora, en el próximo post veremos como trabajar con estos strings y como
+                manipularlos através de métodos, pero por ahora te dejo un par de ejercicios simples para probar
+                lo que hemos visto aquí.
+              </p>
+              <ul class="list">
+                <li>Crear un string e imprimir su length usando la función len()</li>
+                <li>Crear dos strings, concatenarlas e imprimir el string resultante</li>
+                <li>Crear dos variables con strings, entonces imprimir una de ellas después de la otra (con un espacio entre ambas) usando una coma en tu función print</li>
+                <li>Repetir el ejercicio 3, pero en lugar de usar comas en print(), usa concatenación para agregar un espacio entre dos strings</li>
+                <li>imprime el string "magnet" usando slice notation en el string "electromagnetismo"</li>
+              </ul>
+              <br><br><br>
+              <a href="../indice_python.html">
+                <button class="btn post-btn"><i class="fas fa-arrow-left"></i>&nbsp; Volver</button>
+              </a>
+            </div>
+          </div>
+
+
+        </div>
+        <aside class="sidebar">
+          <div class="category">
+            <h2>Categorías</h2>
+            <ul class="category-list">
+              <li class="list-items" data-aos="fade-left" data-aos-delay="100">
+                <a href="../indice_python.html">Python</a>
+              </li>
+              <li class="list-items" data-aos="fade-left" data-aos-delay="400">
+                <a href="../../../src/blog/indice_blog.html">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!---X---Site Content---X--->
+  </main>
+
+  <!---X---Main Site Section---X--->
+
+
+  <!-------Footer------->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="about-us">
+        <h2>Sobre este sitio</h2>
+        <p class="about">Lambda Lain es un sitio que nace con la idea de devolver al internet una parte de todo el
+          conocimiento que me ha regalado.</p>
+      </div>
+      <div class="follow">
+        <h2>Redes</h2>
+        <p class="about">Contacta conmigo</p>
+        <div>
+          <a target="_blank" href="https://twitter.com/Reli_Salazar"><i class="fab fa-twitter"></i></a>
+          <a target="_blank" href="https://www.facebook.com/rlslzr/"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <div class="donations">
+        <h2>¿Quieres apoyar el contenido?</h2>
+        <a target="_blank" href="https://ko-fi.com/N4N11H07D">
+          <p class="about">Invitame un café haciendo click aquí</p>
+          <img src="../../../src/kofi_logo.png" class="img" width="80">
+        </a>
+      </div>
+    </div>
+    <div class="move-up">
+      <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+    </div>
+  </footer>
+
+  <!---X---Footer---X--->
+
+
+  <!-------JQuery Library file------->
+  <script src="../../../js/jquery3.4.1.min.js"></script>
+
+
+  <!-------Custom Javascript file------->
+  <script src="../../../js/main.js"></script>
+
+  <!-------AOS JS Library------->
+  <script src="../../../js/aos.js"></script>
+</body>
+
+</html>

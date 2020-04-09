@@ -42,6 +42,11 @@ ul {
     color: var(--red);
 }
 
+.list li {
+    font-family: var(--Roboto);
+    color: var(--dark);
+}
+
 h1 {
     font-family: var(--SpaceMono);
     font-size: 2.5rem;
