@@ -45,7 +45,6 @@ ul {
 .list li {
     font-family: var(--Roboto);
     color: var(--dark);
-    font-size: 17px;
     margin-bottom: 5px;
 }
 
@@ -467,14 +466,3 @@ footer.footer .move-up span:hover {
 }
 
 /*---X---Viewport less then or equal to 520px---X---*/
-
-
-/*-------Viewport height less then or equal to 700px-------*/
-@media only screen and (max-height:600px) {
-    .nav .nav-menu {
-        justify-content: space-between;
-        position: relative;
-        bottom: 10px;
-    }
-}
-/*---X---Viewport height less then or equal to 700px---X---*/
