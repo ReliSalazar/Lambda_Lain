@@ -45,6 +45,8 @@ ul {
 .list li {
     font-family: var(--Roboto);
     color: var(--dark);
+    font-size: 17px;
+    margin-bottom: 5px;
 }
 
 h1 {
