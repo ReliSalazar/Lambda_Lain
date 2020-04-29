@@ -103,6 +103,8 @@ p {
 
 .nav .nav-menu {
     justify-content: space-between;
+    position: relative;
+    bottom: 3px;
 }
 
 .nav .toggle-collapse {
@@ -183,14 +185,15 @@ p {
 
 main .site-title {
     background: url('../assets/Background-image.png');
+    background-attachment: fixed;
     background-size: cover;
-    height: 70vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
 }
 
 main .site-title .site-background {
-    padding-top: 20vh;
+    padding-top: 30vh;
     text-align: center;
     color: var(--light);
 }
@@ -462,3 +465,14 @@ footer.footer .move-up span:hover {
 }
 
 /*---X---Viewport less then or equal to 520px---X---*/
+
+
+/*-------Viewport height less then or equal to 700px-------*/
+@media only screen and (max-height:600px) {
+    .nav .nav-menu {
+        justify-content: space-between;
+        position: relative;
+        bottom: 10px;
+    }
+}
+/*---X---Viewport height less then or equal to 700px---X---*/
