@@ -194,7 +194,7 @@ main .site-title {
 }
 
 main .site-title .site-background {
-    padding-top: 30vh;
+    padding-top: 25vh;
     text-align: center;
     color: var(--light);
 }
@@ -388,6 +388,15 @@ footer.footer .move-up span:hover {
 /*-------Viewport less then or equal to 750px-------*/
 
 @media only screen and (max-width:750px) {
+
+    main .site-title {
+        height: 70vh;
+    }
+
+    main .site-title .site-background {
+        padding-top: 20vh;
+    }
+
     .nav {
         padding: 0 2rem .5rem 2rem;
     }
