@@ -188,7 +188,7 @@ main .site-title {
     background: url('../assets/Background-image.png');
     background-attachment: fixed;
     background-size: cover;
-    height: 90vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
 }
@@ -389,7 +389,7 @@ footer.footer .move-up span:hover {
 
 @media only screen and (max-width:750px) {
     .nav {
-        padding: 0rem 2rem;
+        padding: 0 2rem .5rem 2rem;
     }
 
     .nav .nav-brand a {
@@ -409,7 +409,7 @@ footer.footer .move-up span:hover {
     }
 
     .collapse {
-        height: 22rem;
+        height: 25rem;
     }
 
     .nav .toggle-collapse {
