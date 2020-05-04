@@ -37,15 +37,27 @@ ul {
     list-style-type: none;
 }
 
+.list li {
+    font-family: var(--Roboto);
+    color: var(--dark);
+    margin-bottom: 5px;
+}
+
 .list li:before {
     content: "λ ";
     color: var(--red);
 }
 
-.list li {
-    font-family: var(--Roboto);
+p {
+    font-size: 16px;
+    font-family: var(--RobotoMono);
     color: var(--dark);
-    margin-bottom: 5px;
+}
+
+li {
+    font-size: 16px;
+    font-family: var(--RobotoMono) !important;
+    color: var(--dark);
 }
 
 h1 {
@@ -155,7 +167,6 @@ p {
     font-size: 1.6rem;
     padding: 1rem 0;
     display: block;
-    font-size: 1.6rem;
     font-family: var(--SpaceMono);
 
     border: 2px solid var(--purple);
@@ -389,6 +400,14 @@ footer.footer .move-up span:hover {
 
 @media only screen and (max-width:750px) {
 
+    p {
+        font-size: 15px;
+    }
+    
+    li {
+        font-size: 15px;
+    }
+
     main .site-title {
         height: 70vh;
     }
@@ -406,7 +425,6 @@ footer.footer .move-up span:hover {
         font-size: 1.6rem;
         padding: 0.5rem 0;
         display: inline-block;
-        font-size: 1.6rem;
         text-align: left;
         margin-top: 0;
     }
@@ -454,6 +472,15 @@ footer.footer .move-up span:hover {
 /*-------Viewport less then or equal to 520px-------*/
 
 @media only screen and (max-width:520px) {
+
+    p {
+        font-size: 12px;
+    }
+    
+    li {
+        font-size: 12px;
+    }
+
     .site-content .post-content > .post-image .post-info {
         display: none;
     }
