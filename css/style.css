@@ -396,7 +396,7 @@ footer.footer .move-up span:hover {
         border: 0px solid var(--purple);
         font-size: 1.6rem;
         padding: 0.5rem 0;
-        display: block;
+        display: inline-block;
         font-size: 1.6rem;
         text-align: left;
         margin-top: 0;
@@ -404,17 +404,24 @@ footer.footer .move-up span:hover {
 
     .nav .nav-menu, .nav .nav-items {
         flex-direction: column;
-        margin-top: 10px;
+        margin-top: 15px;
         font-size: 15px;
+    }
+
+    .collapse {
+        height: 22rem;
     }
 
     .nav .toggle-collapse {
         display: initial;
-        padding: 1rem 0;
+        position: absolute;
+        top: -10px;
+        right: 0;
     }
 
     main .site-content {
         grid-template-columns: 100%;
+        margin-top: 2rem;
     }
 
     footer.footer .container {
@@ -447,7 +454,7 @@ footer.footer .move-up span:hover {
     }
 
     nav .toggle-collapse {
-        width: 80% !important;
+        width: 100% !important;
     }
 
     main .site-content .post-content > .post-image .img {
@@ -459,7 +466,7 @@ footer.footer .move-up span:hover {
     .category h2 {
         font-size: 20px;
     }
-
+    
     .nav .nav-menu, .nav .nav-items {
         font-size: 12px;
     }
